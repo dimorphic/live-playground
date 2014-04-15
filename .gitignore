@@ -1,13 +1,47 @@
-# Git will not track these folders/files
-.tmp
-.sass-cache
-dist
-node_modules
-app/bower_components
-app/components
-docs
-test/
+# Compiled #
+############
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs / DBs #
+##############
+*.log
+*.sql
+*.sqlite
+
+# OS related #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 desktop.ini
 
-# uncomment this if you make changes to Bootstrap 3 so that your changes persist through Git for the project
-#!app/bower_components/sass-bootstrap
+# Special directories/files #
+#############################
+.tmp/
+.sass-cache/
+bower_components/
+components/
+dist/
+node_modules/
