@@ -10,8 +10,8 @@
 /*
   INCLUDES
 */
-@import "reset.css";
-@import "fx.css";
+@import "_reset.css";
+@import "_fx.css";
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -44,6 +44,8 @@ body {
 
 .show-grid {} /* Bootstrap debug */
 .show-grid [class^="col-"] { background-color: #ccc; }
+
+.table-cell { display:table-cell; margin:0 auto; vertical-align:middle; }
 
 .translateCenter {
   position: absolute;
@@ -131,26 +133,54 @@ strong { font-weight: 700; }
 
 /* LOGO */
 .appLogo {
-  /*width: 300px;*/
+  display: table;
 
-  /*margin: 100px;*/
-  padding: 50px;
+  height:150px;
+  width:150px;
 
-  background: #0BB326;
-  color: white;
+  padding:30px;
+
+  background:#0BB326;
+  color:#fff;
 
   font-size: 40px;
   font-size: 4rem;
   font-weight: 300;
   text-align: center;
 
+  cursor:pointer;
+
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
   border-radius: 500px;
-  /*border-radius: 50%;*/
+
+/*  position:absolute;
+  top:50%;
+  left:-3000px;*/
+
+/*  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;*/
 }
+.appLogo i { font-size:50px; font-size:5rem; }
+
 .appLogo.animate {
   -webkit-animation: jellyize 1s both linear;
   animation: jellyize 1s both linear;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .overlay { z-index:1001; }
 .overlay .wrapper { z-index:1002; }
@@ -310,6 +340,35 @@ section {
 }
 
 .clearLink:hover { background: #f0f0f0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
