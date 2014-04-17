@@ -54,15 +54,22 @@ $(function(){
 
     sessionStorage.clear();
   }
+
+
+  fakeLoad = setTimeout((function() {
+    return $(".overlay").fadeOut();
+  }), 1200);
   
   // Logo replay anim
   $(".appLogo").click(function() {
     $(".appLogo").removeClass("animate");
+    clearTimeout(fakeLoad);
 
     return setTimeout((function() {
       return $(".appLogo").addClass("animate");
     }), 0);
   });
 
+  return window.fakeLoad = fakeLoad;
   //return window.clearAll = clearAll;
 });
