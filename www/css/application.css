@@ -132,7 +132,9 @@ strong { font-weight: 700; }
 .navbar li a:hover > i { color:#9b59b6; }
 
 
-/* OVERLAY */
+/*
+  OVERLAY
+*/
 .overlay { z-index:1001; }
 .overlay .wrapper { z-index:1002; }
 
@@ -145,7 +147,9 @@ strong { font-weight: 700; }
   opacity: 0.8;
 }
 
-/* LOGO */
+/*
+  APP LOGO
+*/
 .appLogo {
   display: table;
 
