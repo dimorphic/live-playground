@@ -98,14 +98,15 @@ strong { font-weight: 700; }
 */
 .navbar {
   background: #f9f9f9;
-  font-size:14px;
+  font-size: 14px;
 
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 0px;
 }
 
-.navbar li { border-left:1px solid #e0e0e0; }
-.navbar li.clear { border-left: none; }
+.navbar li { border-right: 1px solid #e0e0e0; }
+.navbar li:first-child { border-left: 1px solid #e0e0e0; }
+.navbar li.clear { border-right: none; }
 
 .navbar li a { color: #999; }
 
@@ -210,10 +211,27 @@ section {
 .panels .editors,
 .panels .result { height: 100%; }
 
-.panels .editors .box { height: 33.33%; }
-.panels .result .box.preview { height: 100%; }
+.panels .editors .box {
+  /*height: 33.33%;*/
+  overflow: hidden;
+
+  opacity: 1;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.panels .result .box.preview,
+.panels .editors .box.focus { height: 100%; }
+
+.panels .editors .box.contract {
+  opacity: 0;
+  height: 0%;
+}
 
 .editors { border-right: 1px solid #e0e0e0; }
+
 .editors .box:nth-child(1),
 .editors .box:nth-child(2) { border-bottom: 1px solid #e0e0e0; }
 
@@ -303,6 +321,7 @@ section {
   -moz-box-shadow:    inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
   box-shadow:         inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
 }
+.box:focus ~ .tag,
 .box textarea:focus ~ .tag {
 /*  border:none;
   background:#8e44ad;
