@@ -11,7 +11,7 @@
     <!-- SITE: INFO -->
     <meta name="author" content="">
     <meta name="description" content="Live code editor playground for HTML, CSS and JavaScript with realtime results preview.">
-    <meta name="keywords" content="html, html5, css, css3, js, javascript, live, playground, code, editor, realtime, jsfiddle, codepen, cssdeck, stackoverflow" />
+    <meta name="keywords" content="live, code, editor, realtime, html, css, js, html5, css3, javascript, jsfiddle, codepen, cssdeck, stackoverflow, playground" />
 
     <!-- Compiled CSS -->
     <link href="./css/application.css" rel="stylesheet"  />
@@ -49,19 +49,19 @@
 			      <a href="#" class="navbar-brand">Logo</a>
 			    </div>
 			   <!--  <nav class="collapse navbar-collapse" role="navigation"> -->
-			      <ul class="nav navbar-nav">
-			        <li>
-			        	<a href="#">
+			      <ul class="nav navbar-nav menu">
+			        <li class="active">
+			        	<a href="#html" class="toggler">
 			        		<i class="ion icon-code"></i> HTML
 			        	</a>
 			        </li>
 			        <li class="active">
-			        	<a href="#">
+			        	<a href="#css" class="toggler">
 			        		<i class="ion icon-code"></i> CSS
 			        	</a>
 			        </li>
-			        <li>
-			        	<a href="#">
+			        <li class="active">
+			        	<a href="#js" class="toggler">
 			        		<i class="ion icon-code"></i> JS
 			        	</a>
 			        </li>
@@ -85,6 +85,7 @@
 						<!-- <textarea id="html" value="" placeholder="HTML" autocapitalize="off" autofocus></textarea> -->
 						
 						<div id="html" class="editor"></div>
+
 						<span class="tag">html</span>
 					</div>
 					<div class="box css">
@@ -96,6 +97,7 @@
 					<div class="box js">
 						<!-- <textarea id="js" value="" placeholder="JavaScript" autocapitalize="off"></textarea
 						> -->
+
 						<div id="js" class="editor"></div>
 						<span class="tag">javascript</span>
 					</div>
@@ -104,7 +106,6 @@
 				<!-- RESULT -->
 				<div class="result col col-xs-6">
 					<div class="box preview">
-						<!-- <iframe id="preview" src="http://www.yoda.ro/"></iframe> -->
 						<iframe id="preview"></iframe>
 						<!-- <span class="tag">preview</span> -->
 					</div>
@@ -114,9 +115,9 @@
 		</div><!-- /end: WRAPPER -->
 
 
+	
+	<!-- Ace -->
 	<script src="lib/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-	<script>
-	</script>
 
 
     <!-- JS -->

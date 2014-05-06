@@ -1,17 +1,10 @@
 // Init
 $(function(){
-  var editorHTML, editorCSS, editorJS, previewFrame;
 
-  previewFrame = document.getElementById("preview").contentWindow.document;
-
-  CodeMirror.modeURL = "../mode/%N/%N.js";
-
+  // Editors config
   var config = {
     lineNumbers: true,
     lineWrapping: true,
-
-    foldGutter: true,
-    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
 
     styleActiveLine: true,
     autoCloseTags: true,
@@ -20,26 +13,51 @@ $(function(){
     // Cursor/select highlight
     matchTags: true,
     matchBrackets: true,
-    highlightSelectionMatches: true
+    highlightSelectionMatches: true,
+
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    foldGutter: true
+    // lint: true
   };
 
+  CodeMirror.modeURL = "../mode/%N/%N.js";
 
-  editorHTML = CodeMirror.fromTextArea(document.getElementById("html"), config);
-  editorCSS = CodeMirror.fromTextArea(document.getElementById("css"), config);
-  editorJS = CodeMirror.fromTextArea(document.getElementById("js"), config);
+  // Editors init
+  var xcfg = {
+    lineNumbers: true,
+    lineWrapping: true,
+
+    styleActiveLine: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+
+    // Cursor/select highlight
+    matchTags: true,
+    matchBrackets: true,
+    highlightSelectionMatches: true,
+
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+    foldGutter: true,
+  
+    lintWith: CodeMirror.javascriptValidator
+  };
+
+  var editorHTML    = CodeMirror.fromTextArea(document.getElementById("html"), config),
+      editorCSS     = CodeMirror.fromTextArea(document.getElementById("css"), config),
+      editorJS      = CodeMirror.fromTextArea(document.getElementById("js"), xcfg),
+      previewFrame  = document.getElementById("preview").contentWindow.document;
+
 
   editorHTML.setOption("mode", "text/html");
-  editorCSS.setOption("mode", "text/x-scss");
+  editorCSS.setOption("mode", "text/css");
   editorJS.setOption("mode", "text/javascript");
-
-  // CodeMirror.autoLoadMode(editor, modeInput.value);
 
   //
   // Session storage of code
   //
-  editorHTML.on('change', function(e) { sessionStorage["html"] = editorHTML.getValue(); });
-  editorCSS.on('change', function(e) { sessionStorage["css"] = editorCSS.getValue(); });
-  editorJS.on('change', function(e) { sessionStorage["js"] = editorJS.getValue(); });
+  editorHTML.on('change', function() { sessionStorage["html"] = editorHTML.getValue(); });
+  editorCSS.on('change', function() { sessionStorage["css"] = editorCSS.getValue(); });
+  editorJS.on('change', function() { sessionStorage["js"] = editorJS.getValue(); });
 
   //
   // Live reload
@@ -53,6 +71,9 @@ $(function(){
     (previewFrame).close()
   }), reloadDebounce);
 
+  //
+  // Local storage
+  //
   loadStorage = function() {
     if (sessionStorage["html"]) {
       editorHTML.setValue(sessionStorage["html"]);
@@ -67,57 +88,14 @@ $(function(){
 
   loadStorage();
 
-  //
-  // Navbar
-  //
-
-  /*
-  var menu = $(".nav.menu li a");
-
-  menu.each(function() {
-    var _root = this;
-    var item = $(this);
-
-    _root.isActive = true;
-
-    item.on("click", function(e){
-      e.preventDefault();
-
-      var target = item.attr("href").substr(1);
-
-      if(_root.isActive) {
-        item.parent().addClass("active");
-        $(".box." + target).removeClass("close");
-      }
-
-      //$(".box." + target).toggleClass("close");
-      //item.parent().toggleClass("active");
-    });
-  });
-*/
-
-  $(".toggler").on("click", function() {
-    var toggler, box;
-    
-    toggler = $(this);
-    box = $(".box." + toggler.attr("href").substr(1));
-    
-    if(box) {
-      toggler.parent().toggleClass("active");
-      
-      if(toggler.parent().hasClass("active")) {
-        box.removeClass("contract");
-      } else {
-        box.addClass("contract");
-      }
-      
-      
-    }
-    
-  });
+  // Change editor syntax
+  changeSyntax = function(editor, mode) {
+    editor.setOption("mode", mode);
+    CodeMirror.autoLoadMode(editor, mode);
+  };
 
   //
-  // Clear all
+  // Clear all editors
   //
   clearAll = function() {
     console.log("clear all");
@@ -125,18 +103,36 @@ $(function(){
     editorHTML.setValue("");
     editorCSS.setValue("");
     editorJS.setValue("");
-    // editorCSS.setValue("");
 
     sessionStorage.clear();
   };
 
-  // Clear editors via button
+  // Bind to button
   $(".clearLink").on("click", function(e){
     e.preventDefault();
 
     clearAll();
   });
-  
+
+
+  //
+  // Navbar
+  //
+  $(".toggler").on("click", function(e) {
+    var toggler = $(this),
+        editor = $(".box." + toggler.attr("href").substr(1));
+    
+    if(editor) {
+      toggler.parent().toggleClass("active");
+      
+      if(toggler.parent().hasClass("active")) {
+        editor.removeClass("contract");
+      } else {
+        editor.addClass("contract");
+      }
+    }
+  });
+
 
 
 
@@ -163,76 +159,15 @@ $(function(){
 
 
 
+  // Append the theme styles
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Publish output from HTMl, CSS, and JS textareas in the iframe below
-  // onload=(document).onkeyup=function(){
-  //   (document.getElementById("preview").contentWindow.document).write(
-  //     html.value+"<style>"+css.value+"<\/style><script>"+js.value+"<\/script>"
-  //   );
-  //   (document.getElementById("preview").contentWindow.document).close()
+  // var link = document.createElement('link');
+  // link.onload = function(){
+  //     editor.setOption("theme", theme);
   // };
-
-  
-
-
-
-
-  // onload=(document).onkeyup=function(){
-  //   (previewFrame).write(
-  //     editorHTML.getValue()+"<style>"+editorCSS.getValue()+"<\/style><script>"+editorJS.getValue()+"<\/script>"
-  //   );
-  //   (previewFrame).close()
-  // };
-
-  // Pressing the Tab key inserts 2 spaces instead of shifting focus
-  /*$("textarea").keydown(function(event){
-    if(event.keyCode === 9){
-      var start = this.selectionStart;
-      var end = this.selectionEnd;
-      var $this = $(this);
-      var value = $this.val();
-      $this.val(value.substring(0, start)+"  "+value.substring(end));
-      this.selectionStart = this.selectionEnd = start+1;
-      event.preventDefault();
-    }
-  });*/
-
-  // Store contents of textarea in sessionStorage
-  /*$("textarea").keydown(function(){
-      sessionStorage[$(this).attr("id")] = $(this).val();
-  });*/
-
-  //$("#html").html(sessionStorage["html"]);
-  //$("#css").html(sessionStorage["css"]);
-  //$("#js").html(sessionStorage["js"]);
-
-  /*
-  function init() {
-    if (sessionStorage["html"]) {
-        $("#html").val(sessionStorage["html"]);
-      }
-    if (sessionStorage["css"]) {
-        $("#css").val(sessionStorage["css"]);
-      }  
-    if (sessionStorage["js"]) {
-        $("#js").val(sessionStorage["js"]);
-      }
-  };
-*/
-
+  // link.rel = "stylesheet";
+  // link.media = "all";
+  // link.href = INTERFACE_URL+"/codemirror/theme/"+theme+".css";
+  // document.getElementsByTagName('head')[0].appendChild(link);
 
 });

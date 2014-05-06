@@ -16,6 +16,8 @@ $(function(){
   editorCSS.getSession().setMode("ace/mode/css");
   editorJS.getSession().setMode("ace/mode/javascript");
 
+  editorHTML.getSession().setUseWrapMode(true);
+
   //
   // On change events
   //
@@ -46,26 +48,25 @@ $(function(){
 
 
   //
-  // Clear all
+  // Clear all editors
   //
   clearAll = function() {
-    //document.getElementById("html").value = "";
-    //document.getElementById("css").value = "";
-    //document.getElementById("js").value = "";
     console.log("clear all");
 
-    ace.edit("css").setValue("");
+    editorHTML.setValue("");
     editorCSS.setValue("");
+    editorJS.setValue("");
 
     sessionStorage.clear();
   };
 
-  // Clear textareas with button
-  $(".clearLink").on("click", function(){
+  // Bind to button
+  $(".clearLink").on("click", function(e){
+    e.preventDefault();
+
     clearAll();
   });
-  
-  //return window.clearAll = clearAll;
+
 
 
   //
@@ -86,79 +87,5 @@ $(function(){
   });
 
   return window.fakeLoad = fakeLoad;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Publish output from HTMl, CSS, and JS textareas in the iframe below
-  // onload=(document).onkeyup=function(){
-  //   (document.getElementById("preview").contentWindow.document).write(
-  //     html.value+"<style>"+css.value+"<\/style><script>"+js.value+"<\/script>"
-  //   );
-  //   (document.getElementById("preview").contentWindow.document).close()
-  // };
-
-  
-
-
-
-
-  // onload=(document).onkeyup=function(){
-  //   (previewFrame).write(
-  //     editorHTML.getValue()+"<style>"+editorCSS.getValue()+"<\/style><script>"+editorJS.getValue()+"<\/script>"
-  //   );
-  //   (previewFrame).close()
-  // };
-
-  // Pressing the Tab key inserts 2 spaces instead of shifting focus
-  /*$("textarea").keydown(function(event){
-    if(event.keyCode === 9){
-      var start = this.selectionStart;
-      var end = this.selectionEnd;
-      var $this = $(this);
-      var value = $this.val();
-      $this.val(value.substring(0, start)+"  "+value.substring(end));
-      this.selectionStart = this.selectionEnd = start+1;
-      event.preventDefault();
-    }
-  });*/
-
-  // Store contents of textarea in sessionStorage
-  /*$("textarea").keydown(function(){
-      sessionStorage[$(this).attr("id")] = $(this).val();
-  });*/
-
-  //$("#html").html(sessionStorage["html"]);
-  //$("#css").html(sessionStorage["css"]);
-  //$("#js").html(sessionStorage["js"]);
-
-  /*
-  function init() {
-    if (sessionStorage["html"]) {
-        $("#html").val(sessionStorage["html"]);
-      }
-    if (sessionStorage["css"]) {
-        $("#css").val(sessionStorage["css"]);
-      }  
-    if (sessionStorage["js"]) {
-        $("#js").val(sessionStorage["js"]);
-      }
-  };
-*/
-
 
 });
