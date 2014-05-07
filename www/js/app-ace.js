@@ -1,38 +1,50 @@
 // Init
 $(function(){
-  var editorHTML, editorCSS, editorJS, previewFrame;
+  var previewFrame  = document.getElementById("preview").contentWindow.document,
+      editorHTML    = ace.edit("html"),
+      editorCSS     = ace.edit("css"),
+      editorJS      = ace.edit("js");
 
-  previewFrame = document.getElementById("preview").contentWindow.document;
-
-  editorHTML = ace.edit("html");
-  editorCSS = ace.edit("css");
-  editorJS = ace.edit("js");
-
+  // Themes
   editorHTML.setTheme("ace/theme/chrome");
   editorCSS.setTheme("ace/theme/chrome");
   editorJS.setTheme("ace/theme/chrome");
 
+  // Modes
   editorHTML.getSession().setMode("ace/mode/html");
   editorCSS.getSession().setMode("ace/mode/css");
   editorJS.getSession().setMode("ace/mode/javascript");
 
-  editorHTML.getSession().setUseWrapMode(true);
+  // Misc settings
+  editorHTML.setShowPrintMargin(false);
+  editorCSS.setShowPrintMargin(false);
+  editorJS.setShowPrintMargin(false);
 
-  //
-  // On change events
-  //
+  editorHTML.getSession().setUseWrapMode(true);
+  editorCSS.getSession().setUseWrapMode(true);
+  editorJS.getSession().setUseWrapMode(true);
+
+  // Session storage of code
   editorHTML.getSession().on('change', function(e) { sessionStorage["html"] = editorHTML.getValue(); });
   editorCSS.getSession().on('change', function(e) { sessionStorage["css"] = editorCSS.getValue(); });
   editorJS.getSession().on('change', function(e) { sessionStorage["js"] = editorJS.getValue(); });
+
+  //
+  // Live reload
+  //
+  reloadDebounce = 500;
 
   liveReload = setInterval((function() {
     (previewFrame).write(
         sessionStorage["html"] + "<style>"+sessionStorage["css"]+"<\/style><script>"+sessionStorage["js"]+"<\/script>"
     );
     (previewFrame).close()
-  }), 500);
+  }), reloadDebounce);
 
-  init = function() {
+  //
+  // Local storage
+  //
+  loadStorage = function() {
     if (sessionStorage["html"]) {
       editorHTML.setValue(sessionStorage["html"]);
     }
@@ -44,8 +56,7 @@ $(function(){
     }
   };
 
-  init();
-
+  loadStorage();
 
   //
   // Clear all editors
@@ -53,9 +64,9 @@ $(function(){
   clearAll = function() {
     console.log("clear all");
 
-    editorHTML.setValue("");
-    editorCSS.setValue("");
-    editorJS.setValue("");
+    // editorHTML.setValue("");
+    // editorCSS.setValue("");
+    // editorJS.setValue("");
 
     sessionStorage.clear();
   };
@@ -66,6 +77,31 @@ $(function(){
 
     clearAll();
   });
+
+
+  //
+  // Navbar
+  //
+  $(".toggler").on("click", function(e) {
+    e.preventDefault();
+    
+    var toggler = $(this),
+        editor = $(".box." + toggler.attr("href").substr(1));
+    
+    if(editor) {
+      toggler.parent().toggleClass("active");
+      
+      if(toggler.parent().hasClass("active")) {
+        editor.removeClass("contract");
+      } else {
+        editor.addClass("contract");
+      }
+    }
+  });
+
+
+
+
 
 
 

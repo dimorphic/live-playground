@@ -119,6 +119,8 @@ $(function(){
   // Navbar
   //
   $(".toggler").on("click", function(e) {
+    e.preventDefault();
+    
     var toggler = $(this),
         editor = $(".box." + toggler.attr("href").substr(1));
     
