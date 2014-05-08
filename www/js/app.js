@@ -1,53 +1,58 @@
-// App
-var codeApp = angular.module('codeApp', [
-	'ui.router', 'ui.ace',
-	'codeApp.controllers'
-])
+(function(){
+  "use strict";
 
-// Add references of $state and $stateParams to the $rootScope
-// so we can access them from any scope within the app
-.run(
-	[		 '$rootScope', '$state', '$stateParams',
-    function ($rootScope,   $state,   $stateParams) {
-	    $rootScope.$state = $state;
-	    $rootScope.$stateParams = $stateParams;
-    }
-])
+	// App
+	var codeApp = angular.module('codeApp', [
+		'ui.router', 'ui.ace',
+		'codeApp.controllers'
+	])
 
-// Redirects + States
-.config(
-	[		 '$stateProvider', '$urlRouterProvider',
-    function ($stateProvider,   $urlRouterProvider) {
+	// Add references of $state and $stateParams to the $rootScope
+	// so we can access them from any scope within the app
+	.run(
+		[		 '$rootScope', '$state', '$stateParams',
+	    function ($rootScope,   $state,   $stateParams) {
+		    $rootScope.$state = $state;
+		    $rootScope.$stateParams = $stateParams;
+	    }
+	])
 
-	  $urlRouterProvider.otherwise('/');
+	// Redirects + States
+	.config(
+		[		 '$stateProvider', '$urlRouterProvider',
+	    function ($stateProvider,   $urlRouterProvider) {
 
-	  $stateProvider
+		  $urlRouterProvider.otherwise('/');
 
-	  	// Home
-	  	.state("home", { 
-	      url: '/',
-	      template: '<div class="demo"> {{ test }} </div>',
-	      controller: 'mainController'
-	    });
+		  $stateProvider
 
-	}
-]);
+		  	// Home
+		  	.state("home", { 
+		      url: '/',
+		      template: '<div class="demo"> {{ test }} </div>',
+		      controller: 'mainController'
+		    });
 
-
-
-var MainController = function($scope, $timeout, $log) {
-	$scope.test = "da fak";
-};
+		}
+	]);
 
 
-// Controllers
-var appControllers = angular.module('codeApp.controllers', []);
 
-appControllers.controller(
-  "mainController",
-  [
-    '$scope',
-    '$timeout',
-    '$log',
-    MainController
-  ]);
+	var MainController = function($scope, $timeout, $log) {
+		$scope.test = "da fak";
+	};
+
+
+	// Controllers
+	var appControllers = angular.module('codeApp.controllers', []);
+
+	appControllers.controller(
+	  "mainController",
+	  [
+	    '$scope',
+	    '$timeout',
+	    '$log',
+	    MainController
+	  ]);
+
+})();
