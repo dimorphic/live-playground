@@ -36,16 +36,18 @@
 		}
 	]);
 
-
+	//
+	// Controllers
+	//
+	var appControllers = angular.module('codeApp.controllers', []);
 
 	var MainController = function($scope, $timeout, $log) {
 		$scope.test = "da fak";
 	};
 
 
-	// Controllers
-	var appControllers = angular.module('codeApp.controllers', []);
-
+	
+	// Set controllers
 	appControllers.controller(
 	  "mainController",
 	  [
