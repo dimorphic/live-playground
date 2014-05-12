@@ -1,1 +1,71 @@
-{{ test }}
+<!-- <div class="part">{{ test }}</div> -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-static-top" id="top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Logo</a>
+    </div>
+   <!--  <nav class="collapse navbar-collapse" role="navigation"> -->
+      <ul class="nav navbar-nav menu">
+        <li class="active">
+        	<a href="#html" class="toggler">
+        		<i class="ion icon-code"></i> HTML
+        	</a>
+        </li>
+        <li class="active">
+        	<a href="#css" class="toggler">
+        		<i class="ion icon-code"></i> CSS
+        	</a>
+        </li>
+        <li class="active">
+        	<a href="#js" class="toggler">
+        		<i class="ion icon-code"></i> JS
+        	</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<li>
+      		<a href="#" onclick="clearAll()" title="Click to clear all">
+      			<i class="ion-ios7-trash-outline"></i> Clear
+      		</a>
+      	</li>
+      </ul>
+   <!--  </nav> -->
+  </div>
+</nav>
+
+<!-- PANELS -->
+<section class="panels group">
+	<!-- EDITORS -->
+	<div class="editors col col-xs-6">
+		<div class="box html">
+			<!-- <textarea id="html" value="" placeholder="HTML" autocapitalize="off" autofocus></textarea> -->
+			
+			<div id="html" class="editor"></div>
+
+			<span class="tag">html</span>
+		</div>
+		<div class="box css">
+			<!-- <textarea id="css" value="" placeholder="CSS" autocapitalize="off"></textarea> -->
+
+			<div id="css" class="editor"></div>
+			<span class="tag">css</span>
+		</div>
+		<div class="box js">
+			<!-- <textarea id="js" value="" placeholder="JavaScript" autocapitalize="off"></textarea
+			> -->
+
+			<div id="js" class="editor"></div>
+			<span class="tag">javascript</span>
+		</div>
+	</div>
+
+	<!-- RESULT -->
+	<div class="result col col-xs-6">
+		<div class="box preview">
+			<iframe id="preview"></iframe>
+			<!-- <span class="tag">preview</span> -->
+		</div>
+	</div>
+</section>

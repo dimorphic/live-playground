@@ -29,7 +29,8 @@
 		  	// Home
 		  	.state("home", { 
 		      url: '/',
-		      template: '<div class="demo"> {{ test }} </div>',
+		      //template: '<div class="demo"> {{ test }} </div>',
+		      templateUrl: 'partials/main.tpl.html',
 		      controller: 'mainController'
 		    });
 
@@ -42,7 +43,7 @@
 	var appControllers = angular.module('codeApp.controllers', []);
 
 	var MainController = function($scope, $timeout, $log) {
-		$scope.test = "da fak xxxx";
+		$scope.test = "hey there";
 	};
 
 
@@ -55,6 +56,7 @@
 	    '$timeout',
 	    '$log',
 	    MainController
-	  ]);
+	  ]
+	);
 
 })();

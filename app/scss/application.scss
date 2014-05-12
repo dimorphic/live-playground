@@ -1,52 +1,71 @@
 @charset "utf-8";
 
-// Libraries
-@import url("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
-
-// Fonts + icons
+/* FONTS / ICONS */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css");
+@import url("http://cdn.jsdelivr.net/animatecss/3.1.0/animate.min.css");
 
-// Compass
-@import "_reset";
-@import "compass/css3";
-@import "compass-flexbox";
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
 
-// Utility mixins for greater good
-@import "_mixins";
+/*
+  INCLUDES
+*/
+@import "_reset.css";
+@import "_fx.css";
 
-// Variables, Fonts, Colors (changing them leads to changing a color scheme)
-@import "_colors";
-@import "_config";
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*text-rendering: optimizeLegibility;*/
+}
 
-// Hacks
-@import "_hacks";
-@import "_fx"; // animations
-@import "_jelly"; // animations
+html { font-size: 62.5%; }
+html, body, section { height: 100%; }
 
-//
-// App (need to convert to SCSS)
-//
 body {
-  color: #000;
-  background: #ddd;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  font-size:1.6rem;
+  font-weight: 300;
 
-  line-height: 1;
+  line-height:1;
+
+  color:#333333;
+  background: #ccc;
 
   position: relative;
 }
-.debug { z-index: 9999; background: #f00; color: #fff; opacity: 0.7; padding: 20px; position: fixed; top: 0; right: 0; }
-
-// General
-.container {}
-
-section { height: 100%; }
 
 /* MISC */
+.sepa { width:100%; height:1px; background:#ccc; }
+.noselect { -moz-user-select:-moz-none; -khtml-user-select:none; -webkit-user-select:none; user-select:none; }
+.noflicker { -webkit-backface-visibility: hidden; -webkit-transform:translate3d(0,0,0); }
+
 .show-grid {} /* Bootstrap debug */
 .show-grid [class^="col-"] { background-color: #ccc; }
 
 .table-cell { display:table-cell; margin:0 auto; vertical-align:middle; }
+
+.translateCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.positionCenter {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 /*
   TYPOGRAPHY / LINKS
@@ -72,6 +91,7 @@ h4 { font-size:15px; font-size:1.5rem; }
 strong { font-weight: 700; }
 .highlight { color:#f81200; }
 .note { color:#aeaeae; }
+
 
 /*
   NAVBAR
@@ -362,3 +382,49 @@ section {
 }
 
 .clearLink:hover { background: #f0f0f0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (min-width:768px) {
+
+  body {
+    padding: 50px 50px 0 50px;
+  }
+
+  html,
+  body,
+  section {
+    height: auto;
+  }
+
+}*/

@@ -157,20 +157,34 @@ module.exports = function(grunt) {
         }
       },
 
+      // html
+      // html: {
+      //   files: [
+      //     'www/{,*/}*.html'
+      //   ],
+      //   tasks: [ 'copy:html', 'notify:copywww' ],
+      //   options: {
+      //     spawn: false,
+      //     livereload: true // Set livereload to trigger a reload upon change
+      //   }
+      // },
+
       // all
       all: {
         files: [
           //'www/**/*'
-          'www/{,*/}*.html'
+          'www/{,*/}*.{html,css,js,png,jpg,gif,svg}'
+          //'www/{,*/}*.html'
           //'www/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
         tasks: [ 'copy:www', 'notify:copywww' ],
         options: {
           spawn: false,
-          livereload: false // Set livereload to trigger a reload upon change
+          livereload: true // Set livereload to trigger a reload upon change
         }
       },
 
+      // livereload
       livereload: {
         files: [
           'dist/{,*/}*.html',
@@ -238,6 +252,14 @@ module.exports = function(grunt) {
     // Copy
     //
     copy: {
+
+      // Html
+      html: {
+        expand: true,
+        cwd: 'www/',
+        src: [ '**/*.html' ],
+        dest: 'dist/'
+      },
 
       // Copy JavaScript files from app/ to dist/
       css: {
