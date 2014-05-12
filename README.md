@@ -11,7 +11,9 @@ This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [
 
 If Ruby is ok, proceed to install SASS and Compass via Terminal :
 
-`gem update --system && gem install compass`
+`
+$ gem update --system && gem install compass
+`
 
 ## Options
  
