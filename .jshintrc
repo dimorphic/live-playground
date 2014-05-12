@@ -1,36 +1,49 @@
 {
-  "curly": true,
-  "eqeqeq": true,
-  "immed": true,
+  "curly":   true,
+  "eqeqeq":  true,
+  "immed":   true,
   "latedef": true,
-  "newcap": true,
-  "noarg": true,
-  "sub": true,
-  "undef": true,
-  "boss": true,
-  "eqnull": true,
-  "node": true,
+  "newcap":  true,
+  "noarg":   true,
+  "sub":     true,
+  "undef":   true,
+  "boss":    true,
+  "eqnull":  true,
+  "browser": true,
+  "node":    true,
+
   "globals": {
-    "angular": true,
-    "_": true,
-    "$": true,
-    "requirejs": true,
-    "document": true,
-    "define": true,
-    "window": true,
-    "host": true,
-    "describe": false,
-    "xdescribe": false,
-    "it": false,
-    "xit": false,
-    "expect": false,
-    "beforeEach": false,
-    "afterEach": false,
-    "spyOn": false,
-    "inject": false,
-    "url": false,
-    "jasmine": false,
-    "sinon": false,
-    "Globalize": false
+    // AMD
+    "module":     true,
+    "require":    true,
+    "requirejs":  true,
+    "define":     true,
+
+    // Environments
+    "console":    true,
+    "document":   true,
+    "window":     true,
+    "host":       true,
+
+    // All around 'goodies' libraries
+    "_":          true,
+    "$":          true,
+    
+    "jQuery":     true,
+    "angular":    true,
+
+    // Testing
+    "sinon":      true,
+    "describe":   true,
+    "it":         true,
+    "expect":     true,
+    "beforeEach": true,
+    "afterEach":  true
+
+    // "spyOn":      false,
+    // "inject":     false,
+    // "url":        false,
+    // "jasmine":    false,
+    // "Globalize":  false,
   }
 }

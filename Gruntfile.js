@@ -82,9 +82,14 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
+      // all: [
+      //   'Gruntfile.js',
+      //   '<%= project.app %>/{,*/}*.js'
+      // ],
       all: [
         'Gruntfile.js',
-        '<%= project.app %>/{,*/}*.js'
+        '<%= project.app %>/{,*/}*.js',
+        '!dist/**'
       ]
     },
 
