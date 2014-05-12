@@ -3,7 +3,14 @@ App
 To do
 
 ## Getting started
-This bundle requires [NodeJS](http://nodejs.org/), [Grunt](http://gruntjs.com/) and [Compass](http://compass-style.org/install/).
+This bundle requires:
+
+[NodeJS](http://nodejs.org/)
+[GruntJS](http://gruntjs.com/)
+[Compass](http://compass-style.org/install/)
+
+### Install Grunt
+`$ npm install -g grunt-cli`
 
 ### SASS compile task
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) installed. If you're on OSX or Linux, Ruby is most likely installed already; test it with 
