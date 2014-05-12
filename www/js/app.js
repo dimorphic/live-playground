@@ -3,7 +3,7 @@
 
 	// App
 	var codeApp = angular.module('codeApp', [
-		'ui.router', 'ui.ace',
+		'ui.router',
 		'codeApp.controllers'
 	])
 
@@ -42,7 +42,7 @@
 	var appControllers = angular.module('codeApp.controllers', []);
 
 	var MainController = function($scope, $timeout, $log) {
-		$scope.test = "da fak";
+		$scope.test = "da fak xxxx";
 	};
 
 

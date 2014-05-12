@@ -1,0 +1,77 @@
+$vendor: '', '-webkit-', '-moz-', '-ms-', '-o-';
+
+// retina mixin
+@mixin image-set($img, $type) {
+    background-image: url($img + $type);
+
+    @each $prefix in $vendor {
+        background-image: #{$prefix}image-set(  url($img + $type) 1x,
+                                                url($img + "@2x" + $type) 2x );
+    }
+}
+
+// automatically apply rem font-size with px fallback and add 1.5 line-height. default is 16px/1.6rem+1.5
+@mixin font-size($sizeValue: 16, $line: 1.5){
+    font-size: $sizeValue + px;
+    font-size: ($sizeValue / 10) + rem;
+    line-height: $line;
+}
+
+// animation mixins
+@mixin animation-timing-function($name) {
+    @each $prefix in $vendor {
+        #{$prefix}animation-timing-function: $name;
+    }
+}
+
+@mixin animation-name($name) {
+    @each $prefix in $vendor {
+        #{$prefix}animation-name: $name;
+    }
+}
+
+@mixin animation-fill-mode($mode) {
+    @each $prefix in $vendor {
+        #{$prefix}animation-fill-mode: $mode;
+    }
+}
+
+@mixin animation-duration($duration) {
+    @each $prefix in $vendor {
+        #{$prefix}animation-duration: $duration;
+    }
+}
+
+@mixin animation-iteration-count($value) {
+  @each $prefix in $vendor {
+    #{$prefix}animation-iteration-count: $value;
+  }
+}
+
+@mixin animation-delay($value) {
+    @each $prefix in $vendor {
+        #{$prefix}animation-delay: $value;
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+$delay: -1s;
+
+@mixin delay {
+  @include animation-delay($delay);
+  $delay: $delay + 0.1;
+}

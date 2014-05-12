@@ -34,7 +34,7 @@ $(function(){
   //
   fakeLoad = setTimeout((function() {
     return $(".overlay").fadeOut();
-  }), 1200);
+  }), 1500);
 
   // Logo replay anim
   $(".appLogo").click(function() {
@@ -50,7 +50,7 @@ $(function(){
   // Navbar
   //
   $(".toggler").on("click", function(e) {
-    e.preventDefault();
+    e.preventDefault(); // prevent jump if <a>
     
     var toggler = $(this),
         editor = $(".box." + toggler.attr("href").substr(1));
