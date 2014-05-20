@@ -34,7 +34,7 @@ input, button, select, textarea { font-family: $base-font-family; }
 // Misc hacks */
 .sepa { width:90%; height:1px; margin: 0px auto; border-top:1px dashed #ecf0f1; }
 .noselect { -moz-user-select:-moz-none; -khtml-user-select:none; -webkit-user-select:none; user-select:none; }
-.noflicker { -webkit-backface-visibility: hidden; @include transform(translate3d(0,0,0)); }
+.noflicker { @include backface-visibility(hidden); @include transform(translate3d(0,0,0)); }
 
 .translateCenter {
   position:  absolute;

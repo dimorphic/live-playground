@@ -457,8 +457,12 @@ input, button, select, textarea {
 }
 
 /* line 37, ../../app/scss/_hacks.scss */
-.noflicker {
+.noflicker, .navbar {
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -2291,12 +2295,12 @@ input, button, select, textarea {
 /* line 30, ../../app/scss/application.scss */
 body {
   color: #000;
-  background: #ddd;
+  background: #ccc;
   line-height: 1;
   position: relative;
 }
 
-/* line 38, ../../app/scss/application.scss */
+/* line 40, ../../app/scss/application.scss */
 .debug {
   z-index: 9999;
   background: #f00;
@@ -2308,19 +2312,24 @@ body {
   right: 0;
 }
 
-/* line 43, ../../app/scss/application.scss */
+/* line 41, ../../app/scss/application.scss */
+.debug button {
+  color: #000;
+}
+
+/* line 46, ../../app/scss/application.scss */
 section {
   height: 100%;
 }
 
 /* MISC */
 /* Bootstrap debug */
-/* line 47, ../../app/scss/application.scss */
+/* line 50, ../../app/scss/application.scss */
 .show-grid [class^="col-"] {
   background-color: #ccc;
 }
 
-/* line 49, ../../app/scss/application.scss */
+/* line 52, ../../app/scss/application.scss */
 .table-cell {
   display: table-cell;
   margin: 0 auto;
@@ -2330,7 +2339,7 @@ section {
 /*
   TYPOGRAPHY / LINKS
 */
-/* line 54, ../../app/scss/application.scss */
+/* line 57, ../../app/scss/application.scss */
 a {
   color: #0271b1;
   text-decoration: none;
@@ -2340,52 +2349,52 @@ a {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 61, ../../app/scss/application.scss */
+/* line 64, ../../app/scss/application.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 64, ../../app/scss/application.scss */
+/* line 67, ../../app/scss/application.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-/* line 65, ../../app/scss/application.scss */
+/* line 68, ../../app/scss/application.scss */
 h1 {
   font-size: 30px;
   font-size: 3.0rem;
 }
 
-/* line 66, ../../app/scss/application.scss */
+/* line 69, ../../app/scss/application.scss */
 h2 {
   font-size: 25px;
   font-size: 2.5rem;
 }
 
-/* line 67, ../../app/scss/application.scss */
+/* line 70, ../../app/scss/application.scss */
 h3 {
   font-size: 22px;
   font-size: 2.2rem;
 }
 
-/* line 68, ../../app/scss/application.scss */
+/* line 71, ../../app/scss/application.scss */
 h4 {
   font-size: 15px;
   font-size: 1.5rem;
 }
 
-/* line 70, ../../app/scss/application.scss */
+/* line 73, ../../app/scss/application.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 71, ../../app/scss/application.scss */
+/* line 74, ../../app/scss/application.scss */
 .highlight {
   color: #f81200;
 }
 
-/* line 72, ../../app/scss/application.scss */
+/* line 75, ../../app/scss/application.scss */
 .note {
   color: #aeaeae;
 }
@@ -2393,64 +2402,86 @@ strong {
 /*
   NAVBAR
 */
-/* line 77, ../../app/scss/application.scss */
+/* line 80, ../../app/scss/application.scss */
 .navbar {
   background: #f9f9f9;
   font-size: 14px;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-/* line 84, ../../app/scss/application.scss */
+/* line 87, ../../app/scss/application.scss */
 .navbar li {
   border-right: 1px solid #e0e0e0;
 }
-/* line 87, ../../app/scss/application.scss */
+/* line 90, ../../app/scss/application.scss */
 .navbar li:first-child {
   border-left: 1px solid #e0e0e0;
 }
-/* line 88, ../../app/scss/application.scss */
+/* line 91, ../../app/scss/application.scss */
 .navbar li.clear {
   border-right: 0;
 }
-/* line 90, ../../app/scss/application.scss */
+/* line 93, ../../app/scss/application.scss */
 .navbar li a {
   color: #999;
 }
-/* line 91, ../../app/scss/application.scss */
+/* line 94, ../../app/scss/application.scss */
 .navbar li.active a {
   background: #fff;
   color: #8e44ad;
   /*border-bottom: 1px solid #fff;
   margin-bottom: -1px;*/
 }
-/* line 101, ../../app/scss/application.scss */
-.navbar i {
+/* line 103, ../../app/scss/application.scss */
+.navbar li i {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 1;
   vertical-align: middle;
   margin-right: 5px;
 }
+/* line 115, ../../app/scss/application.scss */
+.navbar.ui-show {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+/* line 120, ../../app/scss/application.scss */
+.navbar.ui-hide {
+  -webkit-transform: translate3d(0, -100px, 0);
+  -moz-transform: translate3d(0, -100px, 0);
+  -ms-transform: translate3d(0, -100px, 0);
+  -o-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+  opacity: 0;
+}
 
-/* line 108, ../../app/scss/application.scss */
+/* line 127, ../../app/scss/application.scss */
 .navbar li .icon-code:before {
   content: "\f271";
 }
 
 /* collapsed icon */
-/* line 109, ../../app/scss/application.scss */
+/* line 128, ../../app/scss/application.scss */
 .navbar li.active .icon-code:before {
   content: "\f270";
 }
 
 /* expanded icon */
-/* line 111, ../../app/scss/application.scss */
+/* line 130, ../../app/scss/application.scss */
 .navbar li a:hover {
   background: #ecf0f1;
   color: #555;
 }
 
-/* line 112, ../../app/scss/application.scss */
+/* line 131, ../../app/scss/application.scss */
 .navbar li a:hover > i {
   color: #9b59b6;
 }
@@ -2458,17 +2489,17 @@ strong {
 /*
   OVERLAY
 */
-/* line 118, ../../app/scss/application.scss */
+/* line 137, ../../app/scss/application.scss */
 .overlay {
   z-index: 1001;
 }
 
-/* line 119, ../../app/scss/application.scss */
+/* line 138, ../../app/scss/application.scss */
 .overlay .wrapper {
   z-index: 1002;
 }
 
-/* line 121, ../../app/scss/application.scss */
+/* line 140, ../../app/scss/application.scss */
 .overlay .overlay-mask {
   z-index: 999;
   width: 100%;
@@ -2480,7 +2511,7 @@ strong {
 /*
   APP LOGO
 */
-/* line 133, ../../app/scss/application.scss */
+/* line 152, ../../app/scss/application.scss */
 .appLogo {
   display: table;
   height: 150px;
@@ -2504,13 +2535,13 @@ strong {
     box-sizing: content-box;*/
 }
 
-/* line 163, ../../app/scss/application.scss */
+/* line 182, ../../app/scss/application.scss */
 .appLogo i {
   font-size: 50px;
   font-size: 5rem;
 }
 
-/* line 165, ../../app/scss/application.scss */
+/* line 184, ../../app/scss/application.scss */
 .appLogo.animate {
   -webkit-animation: jellyize 1s both linear;
   animation: jellyize 1s both linear;
@@ -2519,13 +2550,13 @@ strong {
 /*
   EDITOR
 */
-/* line 174, ../../app/scss/application.scss */
+/* line 193, ../../app/scss/application.scss */
 .trap {
   height: 100%;
   overflow: hidden;
 }
 
-/* line 176, ../../app/scss/application.scss */
+/* line 195, ../../app/scss/application.scss */
 section {
   background: #fff;
   width: 100%;
@@ -2534,18 +2565,18 @@ section {
 }
 
 /* PANELS */
-/* line 188, ../../app/scss/application.scss */
+/* line 207, ../../app/scss/application.scss */
 .panels .col {
   padding: 0px;
 }
 
-/* line 191, ../../app/scss/application.scss */
+/* line 210, ../../app/scss/application.scss */
 .panels .editors,
 .panels .result {
   height: 100%;
 }
 
-/* line 193, ../../app/scss/application.scss */
+/* line 212, ../../app/scss/application.scss */
 .panels .editors .box {
   height: 33.33%;
   overflow: hidden;
@@ -2556,13 +2587,13 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 205, ../../app/scss/application.scss */
+/* line 224, ../../app/scss/application.scss */
 .panels .editors .box.focus,
 .panels .result .box.preview {
   height: 100%;
 }
 
-/* line 207, ../../app/scss/application.scss */
+/* line 226, ../../app/scss/application.scss */
 .panels .editors .box.contract {
   opacity: 0;
   height: 0%;
@@ -2577,19 +2608,19 @@ section {
     display: none !important;
 }*/
 /* Borders */
-/* line 225, ../../app/scss/application.scss */
+/* line 244, ../../app/scss/application.scss */
 .editors {
   border-right: 1px solid #e0e0e0;
 }
 
-/* line 227, ../../app/scss/application.scss */
+/* line 246, ../../app/scss/application.scss */
 .editors .box:nth-child(1),
 .editors .box:nth-child(2) {
   border-bottom: 1px solid #e0e0e0;
 }
 
 /* BOX */
-/* line 230, ../../app/scss/application.scss */
+/* line 249, ../../app/scss/application.scss */
 .box {
   display: block;
   width: 100%;
@@ -2598,7 +2629,7 @@ section {
   /*overflow: hidden;*/
 }
 
-/* line 239, ../../app/scss/application.scss */
+/* line 258, ../../app/scss/application.scss */
 .box .editor {
   position: absolute;
   top: 0;
@@ -2607,7 +2638,7 @@ section {
   left: 0;
 }
 
-/* line 247, ../../app/scss/application.scss */
+/* line 266, ../../app/scss/application.scss */
 .box .tag {
   padding: 10px;
   font-size: 12px;
@@ -2626,7 +2657,7 @@ section {
   transition: all 0.2s ease-out;
 }
 
-/* line 270, ../../app/scss/application.scss */
+/* line 289, ../../app/scss/application.scss */
 .box:hover > .tag {
   /*color:#888; border-color:#ccc;*/
   border: none;
@@ -2635,7 +2666,7 @@ section {
 }
 
 /* TEXTAREA */
-/* line 278, ../../app/scss/application.scss */
+/* line 297, ../../app/scss/application.scss */
 .box textarea {
   resize: none;
   outline: none;
@@ -2662,7 +2693,7 @@ section {
   -webkit-appearance: none;
 }
 
-/* line 311, ../../app/scss/application.scss */
+/* line 330, ../../app/scss/application.scss */
 .box textarea:focus {
   outline: none;
   -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
@@ -2670,7 +2701,7 @@ section {
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
 }
 
-/* line 318, ../../app/scss/application.scss */
+/* line 337, ../../app/scss/application.scss */
 .box:focus ~ .tag,
 .box textarea:focus ~ .tag {
   /*  border:none;
@@ -2679,7 +2710,7 @@ section {
   opacity: 0;
 }
 
-/* line 325, ../../app/scss/application.scss */
+/* line 344, ../../app/scss/application.scss */
 .box iframe {
   width: 100%;
   height: 100%;
@@ -2692,7 +2723,7 @@ section {
   left: 0;
 }
 
-/* line 338, ../../app/scss/application.scss */
+/* line 357, ../../app/scss/application.scss */
 .box iframe:focus {
   border-color: #f00;
 }
@@ -2702,7 +2733,7 @@ section {
 .box textarea::-webkit-selection { background:#f00; }
 */
 /* old */
-/* line 347, ../../app/scss/application.scss */
+/* line 366, ../../app/scss/application.scss */
 .clearLink {
   position: absolute;
   top: 15px;
@@ -2719,7 +2750,37 @@ section {
   outline: none;
 }
 
-/* line 363, ../../app/scss/application.scss */
+/* line 382, ../../app/scss/application.scss */
 .clearLink:hover {
   background: #f0f0f0;
+}
+
+/* line 386, ../../app/scss/application.scss */
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+  transition: all linear 0.5s;
+}
+
+/* line 397, ../../app/scss/application.scss */
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: block !important;
+}
+
+/* line 402, ../../app/scss/application.scss */
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+/* line 407, ../../app/scss/application.scss */
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
 }

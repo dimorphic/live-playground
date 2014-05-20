@@ -96,7 +96,7 @@ module.exports = function(grunt) {
     // Concat models
     concat: {
       models: {
-        src: 'dist/models/*.js',
+        src: 'app/models/*.js',
         dest: 'dist/models/models.js'
       }
     },
@@ -149,11 +149,11 @@ module.exports = function(grunt) {
 
       // js
       js: {
-        files: [ 'app/**/*.js', 'www/js/**/*.js' ],
-        tasks: [ 'jshint' ],
+        files: [ 'app/**/*.js', 'www/**/*.js' ],
+        tasks: [ 'jshint', 'copy:js_from_app', 'concat:models' ],
         options: {
           spawn: false,
-          livereload: false
+          livereload: true
         }
       },
 
@@ -172,8 +172,10 @@ module.exports = function(grunt) {
       // all
       all: {
         files: [
+          'www/**/{,*/}*.{html,css,js,png,jpg,gif,svg}'
+          //'www/{,*/}*.{html,css,js,png,jpg,gif,svg}'
+
           //'www/**/*'
-          'www/{,*/}*.{html,css,js,png,jpg,gif,svg}'
           //'www/{,*/}*.html'
           //'www/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
@@ -386,6 +388,7 @@ module.exports = function(grunt) {
     'katalyst-compile-sass',
     'copy:js_from_app',
     'copy:www',
+    'concat:models',
     'connect:livereload',
     'open:dev',
     'notify:server',

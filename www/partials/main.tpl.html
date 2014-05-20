@@ -1,7 +1,11 @@
-<div class="part">{{ test }}</div>
+<div class="debug">
+    {{ showNav | json }}
+
+    <button class="button" ng-click="showNav = !showNav">push me</button>
+</div>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-static-top" id="top" role="navigation">
+<nav ui-toggle="showNav" class="navbar navbar-static-top" id="top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="#" class="navbar-brand">Logo</a>
@@ -40,32 +44,35 @@
 	<!-- EDITORS -->
 	<div class="editors col col-xs-6">
 		<div class="box html">
-			<!-- <textarea id="html" value="" placeholder="HTML" autocapitalize="off" autofocus></textarea> -->
-			
-			<div id="html" class="editor"></div>
+      <span class="tag">html</span>
 
-			<span class="tag">html</span>
+			<textarea id="html" value="" placeholder="HTML" autocapitalize="off" autofocus></textarea>
+			<!-- <div id="html" class="editor"></div> -->
+			
 		</div>
 		<div class="box css">
-			<!-- <textarea id="css" value="" placeholder="CSS" autocapitalize="off"></textarea> -->
+      <span class="tag">css</span>
 
-			<div id="css" class="editor"></div>
-			<span class="tag">css</span>
+			<textarea id="css" value="" placeholder="CSS" autocapitalize="off"></textarea>
+			<!-- <div id="css" class="editor"></div> -->
+			
 		</div>
 		<div class="box js">
-			<!-- <textarea id="js" value="" placeholder="JavaScript" autocapitalize="off"></textarea
-			> -->
+      <span class="tag">javascript</span>
 
-			<div id="js" class="editor"></div>
-			<span class="tag">javascript</span>
+			<textarea id="js" value="" placeholder="JavaScript" autocapitalize="off"></textarea
+			>
+			<!-- <div id="js" class="editor"></div> -->
+			
 		</div>
 	</div>
 
 	<!-- RESULT -->
 	<div class="result col col-xs-6">
 		<div class="box preview">
+      <span class="tag">preview</span>
+
 			<iframe id="preview"></iframe>
-			<!-- <span class="tag">preview</span> -->
 		</div>
 	</div>
 </section>

@@ -1,10 +1,12 @@
 (function(){
   "use strict";
 
+  	//
 	// App
+	//
 	var codeApp = angular.module('codeApp', [
-		'ui.router',
-		'codeApp.controllers'
+		'ui.router', 'ui.showhide', 'ngAnimate',
+		'codeApp.controllers', 'codeApp.directives'
 	])
 
 	// Add references of $state and $stateParams to the $rootScope
@@ -43,9 +45,42 @@
 	var appControllers = angular.module('codeApp.controllers', []);
 
 	var MainController = function($scope, $timeout, $log) {
-		$scope.test = "hey there";
+		// --------------
+	    // PUBLIC METHODS
+	    // --------------
+
+		$scope.showNav = false;
+
+		$scope.showTest = false;
+
+		// ---------------
+	    // PRIVATE METHODS
+	    // ---------------
+
+		//
+		// Boot app
+		//
+		var bootApp = function() {};
 	};
 
+	//
+	//	Directives
+	//
+	var appDirectives = angular.module('codeApp.directives', []);
+
+	appDirectives.directive("board", function($timeout) {
+		var tpl = "[BOARD TPL here]";
+
+		// Link DOM element to view
+		var link = function(scope, element, attrs) {};
+
+		return {
+			restrict: "E",
+			scope: true,
+			template: tpl,
+			link: link
+		}
+	});
 
 	
 	// Set controllers
