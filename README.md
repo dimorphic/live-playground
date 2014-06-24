@@ -1,8 +1,28 @@
-# xxx
+App
+============
+To do.
 
-yyyy
+[ Where's the Code? ]
+Work is being done in the "dev" branch for now.
 
+## Getting started
+This bundle requires:
 
-## zzz
+[NodeJS](http://nodejs.org/)
+[GruntJS](http://gruntjs.com/)
+[Compass](http://compass-style.org/install/)
 
-qqqq
+### Install Grunt
+`$ npm install -g grunt-cli`
+
+### SASS compile task
+This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) installed. If you're on OSX or Linux, Ruby is most likely installed already; test it with 
+`ruby -v` in your terminal.
+
+If Ruby is ok, proceed to install SASS and Compass via Terminal :
+
+`$ gem update --system && gem install compass`
+
+## Options
+ 
+To do
