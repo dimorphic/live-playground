@@ -1,0 +1,48 @@
+{
+  "name": "live-playground",
+  "version": "0.0.1",
+  "description": "Live code playground editor for HTML, CSS and JavaScript.",
+  "main": "www/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimorphic/live-playground.git"
+  },
+  "keywords": [
+    "live",
+    "html",
+    "css",
+    "js",
+    "javascript",
+    "editor",
+    "code",
+    "preview",
+    "realtime"
+  ],
+  "author": "Sabin Tudor",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dimorphic/live-playground/issues"
+  },
+  "homepage": "https://github.com/dimorphic/live-playground",
+  "devDependencies": {
+    "connect-livereload": "~0.4.0",
+    "grunt-cli": "^0.1.13",
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-extend-config": "~0.9.2",
+    "grunt-notify": "~0.3.0",
+    "grunt-open": "~0.2.3",
+    "time-grunt": "~0.3.1"
+  }
+}

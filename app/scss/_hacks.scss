@@ -1,0 +1,50 @@
+/*
+// Touch */
+* {
+  -webkit-user-select: none;  /* Disable selection/copy of elements when tapping for a long time */
+  -webkit-touch-callout: none; /* Disable touch callouts */
+
+  // -webkit-text-size-adjust: none;
+}
+
+input, textarea, [contenteditable] * {
+  -webkit-user-select: auto;  /* Allow selection for input elements and those with contenteditable attribute */
+}
+
+/*
+// Box model */
+*, *:after, *:before { @include box-sizing(border-box); }
+
+/*
+// Force base 10 for font size */
+html, body { height:100%; }
+html { font-size: 62.5%; }
+
+/*
+// Typography */
+body {
+	font-family: $base-font-family;
+	@include font-size($base-font-size);
+}
+h1, h2, h3, h4, h5, h6 { font-family: inherit; font-weight: 300; }
+
+input, button, select, textarea { font-family: $base-font-family; }
+
+/*
+// Misc hacks */
+.sepa { width:90%; height:1px; margin: 0px auto; border-top:1px dashed #ecf0f1; }
+.noselect { -moz-user-select:-moz-none; -khtml-user-select:none; -webkit-user-select:none; user-select:none; }
+.noflicker { @include backface-visibility(hidden); @include transform(translate3d(0,0,0)); }
+
+.translateCenter {
+  position:  absolute;
+   top:       50%; 
+   left:      50%;
+   @include transform(translate(-50%, -50%));
+}
+
+.positionCenter { 
+  margin:auto;
+  position:absolute;
+  top:0; bottom:0; left:0; right:0;
+}

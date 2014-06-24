@@ -1,0 +1,2786 @@
+@charset "utf-8";
+/* html5doctor.com Reset v1.6.1 - http://cssreset.com */
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css");
+/* line 2, ../../app/scss/_reset.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 2, ../../app/scss/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* clearfix */
+/* line 6, ../../app/scss/_reset.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+/* line 10, ../../app/scss/_reset.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 11, ../../app/scss/_reset.scss */
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* end clearfix */
+/* line 7, ../../app/scss/lib/_compass-flexbox.scss */
+body {
+  font-family: Helvetica;
+}
+
+/* line 11, ../../app/scss/lib/_compass-flexbox.scss */
+.centered-box-container {
+  background-color: rgba(135, 206, 235, 0.2);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 250px;
+  width: 100%;
+}
+
+/* line 20, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-item, .centered-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: hotpink;
+  color: white;
+  height: 220px;
+  text-align: center;
+  width: 220px;
+}
+
+/* line 31, ../../app/scss/lib/_compass-flexbox.scss */
+.code-comparison {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+/* line 37, ../../app/scss/lib/_compass-flexbox.scss */
+.code-comparison--child {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-height: 100px;
+}
+/* line 41, ../../app/scss/lib/_compass-flexbox.scss */
+.code-comparison--child:nth-child(1) {
+  margin-right: 5px;
+}
+/* line 45, ../../app/scss/lib/_compass-flexbox.scss */
+.code-comparison--child:nth-child(2) {
+  margin-left: 5px;
+}
+
+/* line 52, ../../app/scss/lib/_compass-flexbox.scss */
+.centered-box-container {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 500px;
+}
+
+/* line 59, ../../app/scss/lib/_compass-flexbox.scss */
+.centered-box {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+/* line 63, ../../app/scss/lib/_compass-flexbox.scss */
+.centered-box:hover {
+  height: 400px;
+  width: 500px;
+}
+
+/* line 73, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail > header, .holy-grail > footer, .holy-grail-body article, .holy-grail-body nav, .holy-grail-body aside {
+  padding: 10px;
+}
+/* line 76, ../../app/scss/lib/_compass-flexbox.scss */
+.is-mobile .holy-grail > header, .is-mobile .holy-grail > footer, .is-mobile .holy-grail-body article, .holy-grail-body .is-mobile article, .is-mobile .holy-grail-body nav, .holy-grail-body .is-mobile nav, .is-mobile .holy-grail-body aside, .holy-grail-body .is-mobile aside {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
+/* line 82, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+/* line 89, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail.is-mobile {
+  max-width: 320px;
+}
+/* line 93, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail > header, .holy-grail > footer {
+  background-color: Moccasin;
+}
+
+/* line 99, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  margin: 5px 0;
+  width: 100%;
+}
+/* line 105, ../../app/scss/lib/_compass-flexbox.scss */
+.is-mobile .holy-grail-body {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+}
+/* line 110, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail-body article {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -ms-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+  background-color: PaleTurquoise;
+  margin: 0 5px;
+  min-height: 100px;
+}
+/* line 118, ../../app/scss/lib/_compass-flexbox.scss */
+.is-mobile .holy-grail-body article {
+  margin: 0;
+}
+/* line 123, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail-body nav {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+  background-color: hotpink;
+}
+/* line 130, ../../app/scss/lib/_compass-flexbox.scss */
+.holy-grail-body aside {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+  background-color: Thistle;
+}
+
+/* line 140, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+
+/* line 145, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav-item, .flex-nav-item--search {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #ccc;
+  border-left: 1px solid #999;
+  padding: 5px 10px;
+}
+
+/* line 159, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav-item:hover {
+  background-color: #aaa;
+}
+
+/* line 164, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav-item--search {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* line 168, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav-item--search label {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+/* line 175, ../../app/scss/lib/_compass-flexbox.scss */
+.flex-nav-item--search input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+/* line 3, ../../app/scss/_hacks.scss */
+* {
+  -webkit-user-select: none;
+  /* Disable selection/copy of elements when tapping for a long time */
+  -webkit-touch-callout: none;
+  /* Disable touch callouts */
+}
+
+/* line 10, ../../app/scss/_hacks.scss */
+input, textarea, [contenteditable] * {
+  -webkit-user-select: auto;
+  /* Allow selection for input elements and those with contenteditable attribute */
+}
+
+/* line 16, ../../app/scss/_hacks.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../../app/scss/_hacks.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 21, ../../app/scss/_hacks.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 25, ../../app/scss/_hacks.scss */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* line 29, ../../app/scss/_hacks.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 300;
+}
+
+/* line 31, ../../app/scss/_hacks.scss */
+input, button, select, textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 35, ../../app/scss/_hacks.scss */
+.sepa {
+  width: 90%;
+  height: 1px;
+  margin: 0px auto;
+  border-top: 1px dashed #ecf0f1;
+}
+
+/* line 36, ../../app/scss/_hacks.scss */
+.noselect {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 37, ../../app/scss/_hacks.scss */
+.noflicker, .navbar {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 39, ../../app/scss/_hacks.scss */
+.translateCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 46, ../../app/scss/_hacks.scss */
+.positionCenter {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 3, ../../app/scss/_fx.scss */
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* line 3, ../../app/scss/_fx.scss */
+.animated.hinge {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 4, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 4, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 8, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 9, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 13, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 14, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 18, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 19, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 22, ../../app/scss/_fx.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+  /* line 29, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  /* line 34, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  /* line 41, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  /* line 46, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  /* line 53, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  /* line 58, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  /* line 65, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* line 70, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* line 76, ../../app/scss/_fx.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+  /* line 83, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  /* line 88, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  /* line 95, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+
+  /* line 100, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDown {
+  /* line 107, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+
+  /* line 112, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  /* line 119, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  /* line 124, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* line 130, ../../app/scss/_fx.scss */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes bounceIn {
+  /* line 137, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+
+  /* line 142, ../../app/scss/_fx.scss */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+
+  /* line 147, ../../app/scss/_fx.scss */
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+
+  /* line 151, ../../app/scss/_fx.scss */
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes bounceIn {
+  /* line 157, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3);
+  }
+
+  /* line 162, ../../app/scss/_fx.scss */
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05);
+  }
+
+  /* line 167, ../../app/scss/_fx.scss */
+  70% {
+    -moz-transform: scale(0.9);
+  }
+
+  /* line 171, ../../app/scss/_fx.scss */
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes bounceIn {
+  /* line 177, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.3);
+  }
+
+  /* line 182, ../../app/scss/_fx.scss */
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.05);
+  }
+
+  /* line 187, ../../app/scss/_fx.scss */
+  70% {
+    -o-transform: scale(0.9);
+  }
+
+  /* line 191, ../../app/scss/_fx.scss */
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  /* line 197, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  /* line 202, ../../app/scss/_fx.scss */
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  /* line 207, ../../app/scss/_fx.scss */
+  70% {
+    transform: scale(0.9);
+  }
+
+  /* line 211, ../../app/scss/_fx.scss */
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* line 216, ../../app/scss/_fx.scss */
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  -moz-animation-name: bounceIn;
+  -o-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes fadeInLeft {
+  /* line 224, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 230, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  /* line 238, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 245, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 253, ../../app/scss/_fx.scss */
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  /* line 259, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 265, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  /* line 273, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 280, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 288, ../../app/scss/_fx.scss */
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 294, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 298, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 304, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 308, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 313, ../../app/scss/_fx.scss */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutDown {
+  /* line 319, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 325, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  /* line 333, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 340, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+/* line 348, ../../app/scss/_fx.scss */
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  /* line 354, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 360, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  /* line 368, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 375, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+/* line 383, ../../app/scss/_fx.scss */
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+  /* line 389, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 395, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOutRight {
+  /* line 403, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 410, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+/* line 418, ../../app/scss/_fx.scss */
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutUp {
+  /* line 424, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 430, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  /* line 438, ../../app/scss/_fx.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 445, ../../app/scss/_fx.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+/* line 453, ../../app/scss/_fx.scss */
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+/*
+  CUSTOM JELLY ANIMATION
+*/
+@-webkit-keyframes jellyize {
+  /* line 464, ../../app/scss/_fx.scss */
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+
+  /* line 469, ../../app/scss/_fx.scss */
+  1% {
+    -webkit-transform: scale(0.5278, 0.532);
+    transform: scale(0.5278, 0.532);
+  }
+
+  /* line 474, ../../app/scss/_fx.scss */
+  2% {
+    -webkit-transform: scale(0.5605, 0.5764);
+    transform: scale(0.5605, 0.5764);
+  }
+
+  /* line 479, ../../app/scss/_fx.scss */
+  3% {
+    -webkit-transform: scale(0.5971, 0.6306);
+    transform: scale(0.5971, 0.6306);
+  }
+
+  /* line 484, ../../app/scss/_fx.scss */
+  4% {
+    -webkit-transform: scale(0.6367, 0.6917);
+    transform: scale(0.6367, 0.6917);
+  }
+
+  /* line 489, ../../app/scss/_fx.scss */
+  5% {
+    -webkit-transform: scale(0.6783, 0.7572);
+    transform: scale(0.6783, 0.7572);
+  }
+
+  /* line 494, ../../app/scss/_fx.scss */
+  6% {
+    -webkit-transform: scale(0.7211, 0.8245);
+    transform: scale(0.7211, 0.8245);
+  }
+
+  /* line 499, ../../app/scss/_fx.scss */
+  7% {
+    -webkit-transform: scale(0.7642, 0.8911);
+    transform: scale(0.7642, 0.8911);
+  }
+
+  /* line 504, ../../app/scss/_fx.scss */
+  8% {
+    -webkit-transform: scale(0.8071, 0.955);
+    transform: scale(0.8071, 0.955);
+  }
+
+  /* line 509, ../../app/scss/_fx.scss */
+  9% {
+    -webkit-transform: scale(0.8489, 1.014);
+    transform: scale(0.8489, 1.014);
+  }
+
+  /* line 514, ../../app/scss/_fx.scss */
+  10% {
+    -webkit-transform: scale(0.8892, 1.067);
+    transform: scale(0.8892, 1.067);
+  }
+
+  /* line 519, ../../app/scss/_fx.scss */
+  11% {
+    -webkit-transform: scale(0.9274, 1.113);
+    transform: scale(0.9274, 1.113);
+  }
+
+  /* line 524, ../../app/scss/_fx.scss */
+  12% {
+    -webkit-transform: scale(0.9632, 1.151);
+    transform: scale(0.9632, 1.151);
+  }
+
+  /* line 529, ../../app/scss/_fx.scss */
+  13% {
+    -webkit-transform: scale(0.9961, 1.18);
+    transform: scale(0.9961, 1.18);
+  }
+
+  /* line 534, ../../app/scss/_fx.scss */
+  14% {
+    -webkit-transform: scale(1.026, 1.201);
+    transform: scale(1.026, 1.201);
+  }
+
+  /* line 539, ../../app/scss/_fx.scss */
+  15% {
+    -webkit-transform: scale(1.053, 1.213);
+    transform: scale(1.053, 1.213);
+  }
+
+  /* line 544, ../../app/scss/_fx.scss */
+  16% {
+    -webkit-transform: scale(1.076, 1.217);
+    transform: scale(1.076, 1.217);
+  }
+
+  /* line 549, ../../app/scss/_fx.scss */
+  17% {
+    -webkit-transform: scale(1.112, 1.202);
+    transform: scale(1.112, 1.202);
+  }
+
+  /* line 554, ../../app/scss/_fx.scss */
+  18% {
+    -webkit-transform: scale(1.125, 1.186);
+    transform: scale(1.125, 1.186);
+  }
+
+  /* line 559, ../../app/scss/_fx.scss */
+  19% {
+    -webkit-transform: scale(1.135, 1.166);
+    transform: scale(1.135, 1.166);
+  }
+
+  /* line 564, ../../app/scss/_fx.scss */
+  20% {
+    -webkit-transform: scale(1.142, 1.142);
+    transform: scale(1.142, 1.142);
+  }
+
+  /* line 569, ../../app/scss/_fx.scss */
+  21% {
+    -webkit-transform: scale(1.145, 1.115);
+    transform: scale(1.145, 1.115);
+  }
+
+  /* line 574, ../../app/scss/_fx.scss */
+  22% {
+    -webkit-transform: scale(1.146, 1.087);
+    transform: scale(1.146, 1.087);
+  }
+
+  /* line 579, ../../app/scss/_fx.scss */
+  23% {
+    -webkit-transform: scale(1.145, 1.059);
+    transform: scale(1.145, 1.059);
+  }
+
+  /* line 584, ../../app/scss/_fx.scss */
+  24% {
+    -webkit-transform: scale(1.142, 1.032);
+    transform: scale(1.142, 1.032);
+  }
+
+  /* line 589, ../../app/scss/_fx.scss */
+  25% {
+    -webkit-transform: scale(1.136, 1.006);
+    transform: scale(1.136, 1.006);
+  }
+
+  /* line 594, ../../app/scss/_fx.scss */
+  26% {
+    -webkit-transform: scale(1.129, 0.9826);
+    transform: scale(1.129, 0.9826);
+  }
+
+  /* line 599, ../../app/scss/_fx.scss */
+  27% {
+    -webkit-transform: scale(1.121, 0.9619);
+    transform: scale(1.121, 0.9619);
+  }
+
+  /* line 604, ../../app/scss/_fx.scss */
+  28% {
+    -webkit-transform: scale(1.111, 0.9444);
+    transform: scale(1.111, 0.9444);
+  }
+
+  /* line 609, ../../app/scss/_fx.scss */
+  29% {
+    -webkit-transform: scale(1.101, 0.9304);
+    transform: scale(1.101, 0.9304);
+  }
+
+  /* line 614, ../../app/scss/_fx.scss */
+  30% {
+    -webkit-transform: scale(1.089, 0.9201);
+    transform: scale(1.089, 0.9201);
+  }
+
+  /* line 619, ../../app/scss/_fx.scss */
+  31% {
+    -webkit-transform: scale(1.078, 0.9133);
+    transform: scale(1.078, 0.9133);
+  }
+
+  /* line 624, ../../app/scss/_fx.scss */
+  32% {
+    -webkit-transform: scale(1.066, 0.9101);
+    transform: scale(1.066, 0.9101);
+  }
+
+  /* line 629, ../../app/scss/_fx.scss */
+  33% {
+    -webkit-transform: scale(1.055, 0.9101);
+    transform: scale(1.055, 0.9101);
+  }
+
+  /* line 634, ../../app/scss/_fx.scss */
+  34% {
+    -webkit-transform: scale(1.032, 0.9187);
+    transform: scale(1.032, 0.9187);
+  }
+
+  /* line 639, ../../app/scss/_fx.scss */
+  35% {
+    -webkit-transform: scale(1.022, 0.9264);
+    transform: scale(1.022, 0.9264);
+  }
+
+  /* line 644, ../../app/scss/_fx.scss */
+  36% {
+    -webkit-transform: scale(1.012, 0.9358);
+    transform: scale(1.012, 0.9358);
+  }
+
+  /* line 649, ../../app/scss/_fx.scss */
+  37% {
+    -webkit-transform: scale(1.003, 0.9464);
+    transform: scale(1.003, 0.9464);
+  }
+
+  /* line 654, ../../app/scss/_fx.scss */
+  38% {
+    -webkit-transform: scale(0.9949, 0.9578);
+    transform: scale(0.9949, 0.9578);
+  }
+
+  /* line 659, ../../app/scss/_fx.scss */
+  39% {
+    -webkit-transform: scale(0.9876, 0.9695);
+    transform: scale(0.9876, 0.9695);
+  }
+
+  /* line 664, ../../app/scss/_fx.scss */
+  40% {
+    -webkit-transform: scale(0.9811, 0.9811);
+    transform: scale(0.9811, 0.9811);
+  }
+
+  /* line 669, ../../app/scss/_fx.scss */
+  41% {
+    -webkit-transform: scale(0.9755, 0.9922);
+    transform: scale(0.9755, 0.9922);
+  }
+
+  /* line 674, ../../app/scss/_fx.scss */
+  42% {
+    -webkit-transform: scale(0.9709, 1.002);
+    transform: scale(0.9709, 1.002);
+  }
+
+  /* line 679, ../../app/scss/_fx.scss */
+  43% {
+    -webkit-transform: scale(0.9671, 1.012);
+    transform: scale(0.9671, 1.012);
+  }
+
+  /* line 684, ../../app/scss/_fx.scss */
+  44% {
+    -webkit-transform: scale(0.9643, 1.02);
+    transform: scale(0.9643, 1.02);
+  }
+
+  /* line 689, ../../app/scss/_fx.scss */
+  45% {
+    -webkit-transform: scale(0.9623, 1.026);
+    transform: scale(0.9623, 1.026);
+  }
+
+  /* line 694, ../../app/scss/_fx.scss */
+  46% {
+    -webkit-transform: scale(0.9611, 1.031);
+    transform: scale(0.9611, 1.031);
+  }
+
+  /* line 699, ../../app/scss/_fx.scss */
+  47% {
+    -webkit-transform: scale(0.9606, 1.035);
+    transform: scale(0.9606, 1.035);
+  }
+
+  /* line 704, ../../app/scss/_fx.scss */
+  48% {
+    -webkit-transform: scale(0.9608, 1.037);
+    transform: scale(0.9608, 1.037);
+  }
+
+  /* line 709, ../../app/scss/_fx.scss */
+  49% {
+    -webkit-transform: scale(0.9616, 1.038);
+    transform: scale(0.9616, 1.038);
+  }
+
+  /* line 714, ../../app/scss/_fx.scss */
+  50% {
+    -webkit-transform: scale(0.9647, 1.035);
+    transform: scale(0.9647, 1.035);
+  }
+
+  /* line 719, ../../app/scss/_fx.scss */
+  51% {
+    -webkit-transform: scale(0.9669, 1.032);
+    transform: scale(0.9669, 1.032);
+  }
+
+  /* line 724, ../../app/scss/_fx.scss */
+  52% {
+    -webkit-transform: scale(0.9695, 1.029);
+    transform: scale(0.9695, 1.029);
+  }
+
+  /* line 729, ../../app/scss/_fx.scss */
+  53% {
+    -webkit-transform: scale(0.9722, 1.025);
+    transform: scale(0.9722, 1.025);
+  }
+
+  /* line 734, ../../app/scss/_fx.scss */
+  54% {
+    -webkit-transform: scale(0.9752, 1.02);
+    transform: scale(0.9752, 1.02);
+  }
+
+  /* line 739, ../../app/scss/_fx.scss */
+  55% {
+    -webkit-transform: scale(0.9782, 1.015);
+    transform: scale(0.9782, 1.015);
+  }
+
+  /* line 744, ../../app/scss/_fx.scss */
+  56% {
+    -webkit-transform: scale(0.9814, 1.01);
+    transform: scale(0.9814, 1.01);
+  }
+
+  /* line 749, ../../app/scss/_fx.scss */
+  57% {
+    -webkit-transform: scale(0.9845, 1.006);
+    transform: scale(0.9845, 1.006);
+  }
+
+  /* line 754, ../../app/scss/_fx.scss */
+  58% {
+    -webkit-transform: scale(0.9876, 1.001);
+    transform: scale(0.9876, 1.001);
+  }
+
+  /* line 759, ../../app/scss/_fx.scss */
+  59% {
+    -webkit-transform: scale(0.9905, 0.997);
+    transform: scale(0.9905, 0.997);
+  }
+
+  /* line 764, ../../app/scss/_fx.scss */
+  60% {
+    -webkit-transform: scale(0.9934, 0.9934);
+    transform: scale(0.9934, 0.9934);
+  }
+
+  /* line 769, ../../app/scss/_fx.scss */
+  61% {
+    -webkit-transform: scale(0.9961, 0.9903);
+    transform: scale(0.9961, 0.9903);
+  }
+
+  /* line 774, ../../app/scss/_fx.scss */
+  62% {
+    -webkit-transform: scale(0.9986, 0.9879);
+    transform: scale(0.9986, 0.9879);
+  }
+
+  /* line 779, ../../app/scss/_fx.scss */
+  63% {
+    -webkit-transform: scale(1.001, 0.9861);
+    transform: scale(1.001, 0.9861);
+  }
+
+  /* line 784, ../../app/scss/_fx.scss */
+  64% {
+    -webkit-transform: scale(1.003, 0.9849);
+    transform: scale(1.003, 0.9849);
+  }
+
+  /* line 789, ../../app/scss/_fx.scss */
+  65% {
+    -webkit-transform: scale(1.005, 0.9844);
+    transform: scale(1.005, 0.9844);
+  }
+
+  /* line 794, ../../app/scss/_fx.scss */
+  66% {
+    -webkit-transform: scale(1.006, 0.9844);
+    transform: scale(1.006, 0.9844);
+  }
+
+  /* line 799, ../../app/scss/_fx.scss */
+  67% {
+    -webkit-transform: scale(1.009, 0.9859);
+    transform: scale(1.009, 0.9859);
+  }
+
+  /* line 804, ../../app/scss/_fx.scss */
+  68% {
+    -webkit-transform: scale(1.009, 0.9872);
+    transform: scale(1.009, 0.9872);
+  }
+
+  /* line 809, ../../app/scss/_fx.scss */
+  69% {
+    -webkit-transform: scale(1.01, 0.9888);
+    transform: scale(1.01, 0.9888);
+  }
+
+  /* line 814, ../../app/scss/_fx.scss */
+  70% {
+    -webkit-transform: scale(1.01, 0.9907);
+    transform: scale(1.01, 0.9907);
+  }
+
+  /* line 819, ../../app/scss/_fx.scss */
+  71% {
+    -webkit-transform: scale(1.011, 0.9927);
+    transform: scale(1.011, 0.9927);
+  }
+
+  /* line 824, ../../app/scss/_fx.scss */
+  72% {
+    -webkit-transform: scale(1.011, 0.9947);
+    transform: scale(1.011, 0.9947);
+  }
+
+  /* line 829, ../../app/scss/_fx.scss */
+  73% {
+    -webkit-transform: scale(1.01, 0.9967);
+    transform: scale(1.01, 0.9967);
+  }
+
+  /* line 834, ../../app/scss/_fx.scss */
+  74% {
+    -webkit-transform: scale(1.01, 0.9986);
+    transform: scale(1.01, 0.9986);
+  }
+
+  /* line 839, ../../app/scss/_fx.scss */
+  75% {
+    -webkit-transform: scale(1.01, 1);
+    transform: scale(1.01, 1);
+  }
+
+  /* line 844, ../../app/scss/_fx.scss */
+  76% {
+    -webkit-transform: scale(1.009, 1.002);
+    transform: scale(1.009, 1.002);
+  }
+
+  /* line 849, ../../app/scss/_fx.scss */
+  77% {
+    -webkit-transform: scale(1.008, 1.003);
+    transform: scale(1.008, 1.003);
+  }
+
+  /* line 854, ../../app/scss/_fx.scss */
+  78% {
+    -webkit-transform: scale(1.008, 1.005);
+    transform: scale(1.008, 1.005);
+  }
+
+  /* line 859, ../../app/scss/_fx.scss */
+  79% {
+    -webkit-transform: scale(1.007, 1.005);
+    transform: scale(1.007, 1.005);
+  }
+
+  /* line 864, ../../app/scss/_fx.scss */
+  80% {
+    -webkit-transform: scale(1.006, 1.006);
+    transform: scale(1.006, 1.006);
+  }
+
+  /* line 869, ../../app/scss/_fx.scss */
+  81% {
+    -webkit-transform: scale(1.005, 1.006);
+    transform: scale(1.005, 1.006);
+  }
+
+  /* line 874, ../../app/scss/_fx.scss */
+  82% {
+    -webkit-transform: scale(1.004, 1.007);
+    transform: scale(1.004, 1.007);
+  }
+
+  /* line 879, ../../app/scss/_fx.scss */
+  83% {
+    -webkit-transform: scale(1.004, 1.006);
+    transform: scale(1.004, 1.006);
+  }
+
+  /* line 884, ../../app/scss/_fx.scss */
+  84% {
+    -webkit-transform: scale(1.002, 1.006);
+    transform: scale(1.002, 1.006);
+  }
+
+  /* line 889, ../../app/scss/_fx.scss */
+  85% {
+    -webkit-transform: scale(1.001, 1.005);
+    transform: scale(1.001, 1.005);
+  }
+
+  /* line 894, ../../app/scss/_fx.scss */
+  86% {
+    -webkit-transform: scale(1.001, 1.004);
+    transform: scale(1.001, 1.004);
+  }
+
+  /* line 899, ../../app/scss/_fx.scss */
+  87% {
+    -webkit-transform: scale(0.9999, 1.003);
+    transform: scale(0.9999, 1.003);
+  }
+
+  /* line 904, ../../app/scss/_fx.scss */
+  88% {
+    -webkit-transform: scale(0.9994, 1.003);
+    transform: scale(0.9994, 1.003);
+  }
+
+  /* line 909, ../../app/scss/_fx.scss */
+  89% {
+    -webkit-transform: scale(0.9989, 1.002);
+    transform: scale(0.9989, 1.002);
+  }
+
+  /* line 914, ../../app/scss/_fx.scss */
+  90% {
+    -webkit-transform: scale(0.9984, 1.001);
+    transform: scale(0.9984, 1.001);
+  }
+
+  /* line 919, ../../app/scss/_fx.scss */
+  91% {
+    -webkit-transform: scale(0.9981, 1);
+    transform: scale(0.9981, 1);
+  }
+
+  /* line 924, ../../app/scss/_fx.scss */
+  92% {
+    -webkit-transform: scale(0.9977, 0.9995);
+    transform: scale(0.9977, 0.9995);
+  }
+
+  /* line 929, ../../app/scss/_fx.scss */
+  93% {
+    -webkit-transform: scale(0.9975, 0.9988);
+    transform: scale(0.9975, 0.9988);
+  }
+
+  /* line 934, ../../app/scss/_fx.scss */
+  94% {
+    -webkit-transform: scale(0.9973, 0.9983);
+    transform: scale(0.9973, 0.9983);
+  }
+
+  /* line 939, ../../app/scss/_fx.scss */
+  95% {
+    -webkit-transform: scale(0.9972, 0.9979);
+    transform: scale(0.9972, 0.9979);
+  }
+
+  /* line 944, ../../app/scss/_fx.scss */
+  96% {
+    -webkit-transform: scale(0.9972, 0.9976);
+    transform: scale(0.9972, 0.9976);
+  }
+
+  /* line 949, ../../app/scss/_fx.scss */
+  97% {
+    -webkit-transform: scale(0.9971, 0.9974);
+    transform: scale(0.9971, 0.9974);
+  }
+
+  /* line 954, ../../app/scss/_fx.scss */
+  98% {
+    -webkit-transform: scale(0.9972, 0.9973);
+    transform: scale(0.9972, 0.9973);
+  }
+
+  /* line 959, ../../app/scss/_fx.scss */
+  99% {
+    -webkit-transform: scale(0.9973, 0.9973);
+    transform: scale(0.9973, 0.9973);
+  }
+
+  /* line 964, ../../app/scss/_fx.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes jellyize {
+  /* line 971, ../../app/scss/_fx.scss */
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+
+  /* line 976, ../../app/scss/_fx.scss */
+  1% {
+    -webkit-transform: scale(0.5278, 0.532);
+    transform: scale(0.5278, 0.532);
+  }
+
+  /* line 981, ../../app/scss/_fx.scss */
+  2% {
+    -webkit-transform: scale(0.5605, 0.5764);
+    transform: scale(0.5605, 0.5764);
+  }
+
+  /* line 986, ../../app/scss/_fx.scss */
+  3% {
+    -webkit-transform: scale(0.5971, 0.6306);
+    transform: scale(0.5971, 0.6306);
+  }
+
+  /* line 991, ../../app/scss/_fx.scss */
+  4% {
+    -webkit-transform: scale(0.6367, 0.6917);
+    transform: scale(0.6367, 0.6917);
+  }
+
+  /* line 996, ../../app/scss/_fx.scss */
+  5% {
+    -webkit-transform: scale(0.6783, 0.7572);
+    transform: scale(0.6783, 0.7572);
+  }
+
+  /* line 1001, ../../app/scss/_fx.scss */
+  6% {
+    -webkit-transform: scale(0.7211, 0.8245);
+    transform: scale(0.7211, 0.8245);
+  }
+
+  /* line 1006, ../../app/scss/_fx.scss */
+  7% {
+    -webkit-transform: scale(0.7642, 0.8911);
+    transform: scale(0.7642, 0.8911);
+  }
+
+  /* line 1011, ../../app/scss/_fx.scss */
+  8% {
+    -webkit-transform: scale(0.8071, 0.955);
+    transform: scale(0.8071, 0.955);
+  }
+
+  /* line 1016, ../../app/scss/_fx.scss */
+  9% {
+    -webkit-transform: scale(0.8489, 1.014);
+    transform: scale(0.8489, 1.014);
+  }
+
+  /* line 1021, ../../app/scss/_fx.scss */
+  10% {
+    -webkit-transform: scale(0.8892, 1.067);
+    transform: scale(0.8892, 1.067);
+  }
+
+  /* line 1026, ../../app/scss/_fx.scss */
+  11% {
+    -webkit-transform: scale(0.9274, 1.113);
+    transform: scale(0.9274, 1.113);
+  }
+
+  /* line 1031, ../../app/scss/_fx.scss */
+  12% {
+    -webkit-transform: scale(0.9632, 1.151);
+    transform: scale(0.9632, 1.151);
+  }
+
+  /* line 1036, ../../app/scss/_fx.scss */
+  13% {
+    -webkit-transform: scale(0.9961, 1.18);
+    transform: scale(0.9961, 1.18);
+  }
+
+  /* line 1041, ../../app/scss/_fx.scss */
+  14% {
+    -webkit-transform: scale(1.026, 1.201);
+    transform: scale(1.026, 1.201);
+  }
+
+  /* line 1046, ../../app/scss/_fx.scss */
+  15% {
+    -webkit-transform: scale(1.053, 1.213);
+    transform: scale(1.053, 1.213);
+  }
+
+  /* line 1051, ../../app/scss/_fx.scss */
+  16% {
+    -webkit-transform: scale(1.076, 1.217);
+    transform: scale(1.076, 1.217);
+  }
+
+  /* line 1056, ../../app/scss/_fx.scss */
+  17% {
+    -webkit-transform: scale(1.112, 1.202);
+    transform: scale(1.112, 1.202);
+  }
+
+  /* line 1061, ../../app/scss/_fx.scss */
+  18% {
+    -webkit-transform: scale(1.125, 1.186);
+    transform: scale(1.125, 1.186);
+  }
+
+  /* line 1066, ../../app/scss/_fx.scss */
+  19% {
+    -webkit-transform: scale(1.135, 1.166);
+    transform: scale(1.135, 1.166);
+  }
+
+  /* line 1071, ../../app/scss/_fx.scss */
+  20% {
+    -webkit-transform: scale(1.142, 1.142);
+    transform: scale(1.142, 1.142);
+  }
+
+  /* line 1076, ../../app/scss/_fx.scss */
+  21% {
+    -webkit-transform: scale(1.145, 1.115);
+    transform: scale(1.145, 1.115);
+  }
+
+  /* line 1081, ../../app/scss/_fx.scss */
+  22% {
+    -webkit-transform: scale(1.146, 1.087);
+    transform: scale(1.146, 1.087);
+  }
+
+  /* line 1086, ../../app/scss/_fx.scss */
+  23% {
+    -webkit-transform: scale(1.145, 1.059);
+    transform: scale(1.145, 1.059);
+  }
+
+  /* line 1091, ../../app/scss/_fx.scss */
+  24% {
+    -webkit-transform: scale(1.142, 1.032);
+    transform: scale(1.142, 1.032);
+  }
+
+  /* line 1096, ../../app/scss/_fx.scss */
+  25% {
+    -webkit-transform: scale(1.136, 1.006);
+    transform: scale(1.136, 1.006);
+  }
+
+  /* line 1101, ../../app/scss/_fx.scss */
+  26% {
+    -webkit-transform: scale(1.129, 0.9826);
+    transform: scale(1.129, 0.9826);
+  }
+
+  /* line 1106, ../../app/scss/_fx.scss */
+  27% {
+    -webkit-transform: scale(1.121, 0.9619);
+    transform: scale(1.121, 0.9619);
+  }
+
+  /* line 1111, ../../app/scss/_fx.scss */
+  28% {
+    -webkit-transform: scale(1.111, 0.9444);
+    transform: scale(1.111, 0.9444);
+  }
+
+  /* line 1116, ../../app/scss/_fx.scss */
+  29% {
+    -webkit-transform: scale(1.101, 0.9304);
+    transform: scale(1.101, 0.9304);
+  }
+
+  /* line 1121, ../../app/scss/_fx.scss */
+  30% {
+    -webkit-transform: scale(1.089, 0.9201);
+    transform: scale(1.089, 0.9201);
+  }
+
+  /* line 1126, ../../app/scss/_fx.scss */
+  31% {
+    -webkit-transform: scale(1.078, 0.9133);
+    transform: scale(1.078, 0.9133);
+  }
+
+  /* line 1131, ../../app/scss/_fx.scss */
+  32% {
+    -webkit-transform: scale(1.066, 0.9101);
+    transform: scale(1.066, 0.9101);
+  }
+
+  /* line 1136, ../../app/scss/_fx.scss */
+  33% {
+    -webkit-transform: scale(1.055, 0.9101);
+    transform: scale(1.055, 0.9101);
+  }
+
+  /* line 1141, ../../app/scss/_fx.scss */
+  34% {
+    -webkit-transform: scale(1.032, 0.9187);
+    transform: scale(1.032, 0.9187);
+  }
+
+  /* line 1146, ../../app/scss/_fx.scss */
+  35% {
+    -webkit-transform: scale(1.022, 0.9264);
+    transform: scale(1.022, 0.9264);
+  }
+
+  /* line 1151, ../../app/scss/_fx.scss */
+  36% {
+    -webkit-transform: scale(1.012, 0.9358);
+    transform: scale(1.012, 0.9358);
+  }
+
+  /* line 1156, ../../app/scss/_fx.scss */
+  37% {
+    -webkit-transform: scale(1.003, 0.9464);
+    transform: scale(1.003, 0.9464);
+  }
+
+  /* line 1161, ../../app/scss/_fx.scss */
+  38% {
+    -webkit-transform: scale(0.9949, 0.9578);
+    transform: scale(0.9949, 0.9578);
+  }
+
+  /* line 1166, ../../app/scss/_fx.scss */
+  39% {
+    -webkit-transform: scale(0.9876, 0.9695);
+    transform: scale(0.9876, 0.9695);
+  }
+
+  /* line 1171, ../../app/scss/_fx.scss */
+  40% {
+    -webkit-transform: scale(0.9811, 0.9811);
+    transform: scale(0.9811, 0.9811);
+  }
+
+  /* line 1176, ../../app/scss/_fx.scss */
+  41% {
+    -webkit-transform: scale(0.9755, 0.9922);
+    transform: scale(0.9755, 0.9922);
+  }
+
+  /* line 1181, ../../app/scss/_fx.scss */
+  42% {
+    -webkit-transform: scale(0.9709, 1.002);
+    transform: scale(0.9709, 1.002);
+  }
+
+  /* line 1186, ../../app/scss/_fx.scss */
+  43% {
+    -webkit-transform: scale(0.9671, 1.012);
+    transform: scale(0.9671, 1.012);
+  }
+
+  /* line 1191, ../../app/scss/_fx.scss */
+  44% {
+    -webkit-transform: scale(0.9643, 1.02);
+    transform: scale(0.9643, 1.02);
+  }
+
+  /* line 1196, ../../app/scss/_fx.scss */
+  45% {
+    -webkit-transform: scale(0.9623, 1.026);
+    transform: scale(0.9623, 1.026);
+  }
+
+  /* line 1201, ../../app/scss/_fx.scss */
+  46% {
+    -webkit-transform: scale(0.9611, 1.031);
+    transform: scale(0.9611, 1.031);
+  }
+
+  /* line 1206, ../../app/scss/_fx.scss */
+  47% {
+    -webkit-transform: scale(0.9606, 1.035);
+    transform: scale(0.9606, 1.035);
+  }
+
+  /* line 1211, ../../app/scss/_fx.scss */
+  48% {
+    -webkit-transform: scale(0.9608, 1.037);
+    transform: scale(0.9608, 1.037);
+  }
+
+  /* line 1216, ../../app/scss/_fx.scss */
+  49% {
+    -webkit-transform: scale(0.9616, 1.038);
+    transform: scale(0.9616, 1.038);
+  }
+
+  /* line 1221, ../../app/scss/_fx.scss */
+  50% {
+    -webkit-transform: scale(0.9647, 1.035);
+    transform: scale(0.9647, 1.035);
+  }
+
+  /* line 1226, ../../app/scss/_fx.scss */
+  51% {
+    -webkit-transform: scale(0.9669, 1.032);
+    transform: scale(0.9669, 1.032);
+  }
+
+  /* line 1231, ../../app/scss/_fx.scss */
+  52% {
+    -webkit-transform: scale(0.9695, 1.029);
+    transform: scale(0.9695, 1.029);
+  }
+
+  /* line 1236, ../../app/scss/_fx.scss */
+  53% {
+    -webkit-transform: scale(0.9722, 1.025);
+    transform: scale(0.9722, 1.025);
+  }
+
+  /* line 1241, ../../app/scss/_fx.scss */
+  54% {
+    -webkit-transform: scale(0.9752, 1.02);
+    transform: scale(0.9752, 1.02);
+  }
+
+  /* line 1246, ../../app/scss/_fx.scss */
+  55% {
+    -webkit-transform: scale(0.9782, 1.015);
+    transform: scale(0.9782, 1.015);
+  }
+
+  /* line 1251, ../../app/scss/_fx.scss */
+  56% {
+    -webkit-transform: scale(0.9814, 1.01);
+    transform: scale(0.9814, 1.01);
+  }
+
+  /* line 1256, ../../app/scss/_fx.scss */
+  57% {
+    -webkit-transform: scale(0.9845, 1.006);
+    transform: scale(0.9845, 1.006);
+  }
+
+  /* line 1261, ../../app/scss/_fx.scss */
+  58% {
+    -webkit-transform: scale(0.9876, 1.001);
+    transform: scale(0.9876, 1.001);
+  }
+
+  /* line 1266, ../../app/scss/_fx.scss */
+  59% {
+    -webkit-transform: scale(0.9905, 0.997);
+    transform: scale(0.9905, 0.997);
+  }
+
+  /* line 1271, ../../app/scss/_fx.scss */
+  60% {
+    -webkit-transform: scale(0.9934, 0.9934);
+    transform: scale(0.9934, 0.9934);
+  }
+
+  /* line 1276, ../../app/scss/_fx.scss */
+  61% {
+    -webkit-transform: scale(0.9961, 0.9903);
+    transform: scale(0.9961, 0.9903);
+  }
+
+  /* line 1281, ../../app/scss/_fx.scss */
+  62% {
+    -webkit-transform: scale(0.9986, 0.9879);
+    transform: scale(0.9986, 0.9879);
+  }
+
+  /* line 1286, ../../app/scss/_fx.scss */
+  63% {
+    -webkit-transform: scale(1.001, 0.9861);
+    transform: scale(1.001, 0.9861);
+  }
+
+  /* line 1291, ../../app/scss/_fx.scss */
+  64% {
+    -webkit-transform: scale(1.003, 0.9849);
+    transform: scale(1.003, 0.9849);
+  }
+
+  /* line 1296, ../../app/scss/_fx.scss */
+  65% {
+    -webkit-transform: scale(1.005, 0.9844);
+    transform: scale(1.005, 0.9844);
+  }
+
+  /* line 1301, ../../app/scss/_fx.scss */
+  66% {
+    -webkit-transform: scale(1.006, 0.9844);
+    transform: scale(1.006, 0.9844);
+  }
+
+  /* line 1306, ../../app/scss/_fx.scss */
+  67% {
+    -webkit-transform: scale(1.009, 0.9859);
+    transform: scale(1.009, 0.9859);
+  }
+
+  /* line 1311, ../../app/scss/_fx.scss */
+  68% {
+    -webkit-transform: scale(1.009, 0.9872);
+    transform: scale(1.009, 0.9872);
+  }
+
+  /* line 1316, ../../app/scss/_fx.scss */
+  69% {
+    -webkit-transform: scale(1.01, 0.9888);
+    transform: scale(1.01, 0.9888);
+  }
+
+  /* line 1321, ../../app/scss/_fx.scss */
+  70% {
+    -webkit-transform: scale(1.01, 0.9907);
+    transform: scale(1.01, 0.9907);
+  }
+
+  /* line 1326, ../../app/scss/_fx.scss */
+  71% {
+    -webkit-transform: scale(1.011, 0.9927);
+    transform: scale(1.011, 0.9927);
+  }
+
+  /* line 1331, ../../app/scss/_fx.scss */
+  72% {
+    -webkit-transform: scale(1.011, 0.9947);
+    transform: scale(1.011, 0.9947);
+  }
+
+  /* line 1336, ../../app/scss/_fx.scss */
+  73% {
+    -webkit-transform: scale(1.01, 0.9967);
+    transform: scale(1.01, 0.9967);
+  }
+
+  /* line 1341, ../../app/scss/_fx.scss */
+  74% {
+    -webkit-transform: scale(1.01, 0.9986);
+    transform: scale(1.01, 0.9986);
+  }
+
+  /* line 1346, ../../app/scss/_fx.scss */
+  75% {
+    -webkit-transform: scale(1.01, 1);
+    transform: scale(1.01, 1);
+  }
+
+  /* line 1351, ../../app/scss/_fx.scss */
+  76% {
+    -webkit-transform: scale(1.009, 1.002);
+    transform: scale(1.009, 1.002);
+  }
+
+  /* line 1356, ../../app/scss/_fx.scss */
+  77% {
+    -webkit-transform: scale(1.008, 1.003);
+    transform: scale(1.008, 1.003);
+  }
+
+  /* line 1361, ../../app/scss/_fx.scss */
+  78% {
+    -webkit-transform: scale(1.008, 1.005);
+    transform: scale(1.008, 1.005);
+  }
+
+  /* line 1366, ../../app/scss/_fx.scss */
+  79% {
+    -webkit-transform: scale(1.007, 1.005);
+    transform: scale(1.007, 1.005);
+  }
+
+  /* line 1371, ../../app/scss/_fx.scss */
+  80% {
+    -webkit-transform: scale(1.006, 1.006);
+    transform: scale(1.006, 1.006);
+  }
+
+  /* line 1376, ../../app/scss/_fx.scss */
+  81% {
+    -webkit-transform: scale(1.005, 1.006);
+    transform: scale(1.005, 1.006);
+  }
+
+  /* line 1381, ../../app/scss/_fx.scss */
+  82% {
+    -webkit-transform: scale(1.004, 1.007);
+    transform: scale(1.004, 1.007);
+  }
+
+  /* line 1386, ../../app/scss/_fx.scss */
+  83% {
+    -webkit-transform: scale(1.004, 1.006);
+    transform: scale(1.004, 1.006);
+  }
+
+  /* line 1391, ../../app/scss/_fx.scss */
+  84% {
+    -webkit-transform: scale(1.002, 1.006);
+    transform: scale(1.002, 1.006);
+  }
+
+  /* line 1396, ../../app/scss/_fx.scss */
+  85% {
+    -webkit-transform: scale(1.001, 1.005);
+    transform: scale(1.001, 1.005);
+  }
+
+  /* line 1401, ../../app/scss/_fx.scss */
+  86% {
+    -webkit-transform: scale(1.001, 1.004);
+    transform: scale(1.001, 1.004);
+  }
+
+  /* line 1406, ../../app/scss/_fx.scss */
+  87% {
+    -webkit-transform: scale(0.9999, 1.003);
+    transform: scale(0.9999, 1.003);
+  }
+
+  /* line 1411, ../../app/scss/_fx.scss */
+  88% {
+    -webkit-transform: scale(0.9994, 1.003);
+    transform: scale(0.9994, 1.003);
+  }
+
+  /* line 1416, ../../app/scss/_fx.scss */
+  89% {
+    -webkit-transform: scale(0.9989, 1.002);
+    transform: scale(0.9989, 1.002);
+  }
+
+  /* line 1421, ../../app/scss/_fx.scss */
+  90% {
+    -webkit-transform: scale(0.9984, 1.001);
+    transform: scale(0.9984, 1.001);
+  }
+
+  /* line 1426, ../../app/scss/_fx.scss */
+  91% {
+    -webkit-transform: scale(0.9981, 1);
+    transform: scale(0.9981, 1);
+  }
+
+  /* line 1431, ../../app/scss/_fx.scss */
+  92% {
+    -webkit-transform: scale(0.9977, 0.9995);
+    transform: scale(0.9977, 0.9995);
+  }
+
+  /* line 1436, ../../app/scss/_fx.scss */
+  93% {
+    -webkit-transform: scale(0.9975, 0.9988);
+    transform: scale(0.9975, 0.9988);
+  }
+
+  /* line 1441, ../../app/scss/_fx.scss */
+  94% {
+    -webkit-transform: scale(0.9973, 0.9983);
+    transform: scale(0.9973, 0.9983);
+  }
+
+  /* line 1446, ../../app/scss/_fx.scss */
+  95% {
+    -webkit-transform: scale(0.9972, 0.9979);
+    transform: scale(0.9972, 0.9979);
+  }
+
+  /* line 1451, ../../app/scss/_fx.scss */
+  96% {
+    -webkit-transform: scale(0.9972, 0.9976);
+    transform: scale(0.9972, 0.9976);
+  }
+
+  /* line 1456, ../../app/scss/_fx.scss */
+  97% {
+    -webkit-transform: scale(0.9971, 0.9974);
+    transform: scale(0.9971, 0.9974);
+  }
+
+  /* line 1461, ../../app/scss/_fx.scss */
+  98% {
+    -webkit-transform: scale(0.9972, 0.9973);
+    transform: scale(0.9972, 0.9973);
+  }
+
+  /* line 1466, ../../app/scss/_fx.scss */
+  99% {
+    -webkit-transform: scale(0.9973, 0.9973);
+    transform: scale(0.9973, 0.9973);
+  }
+
+  /* line 1471, ../../app/scss/_fx.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 30, ../../app/scss/application.scss */
+body {
+  color: #000;
+  background: #ccc;
+  line-height: 1;
+  position: relative;
+}
+
+/* line 40, ../../app/scss/application.scss */
+.debug {
+  z-index: 9999;
+  background: #f00;
+  color: #fff;
+  opacity: 0.7;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* line 41, ../../app/scss/application.scss */
+.debug button {
+  color: #000;
+}
+
+/* line 46, ../../app/scss/application.scss */
+section {
+  height: 100%;
+}
+
+/* MISC */
+/* Bootstrap debug */
+/* line 50, ../../app/scss/application.scss */
+.show-grid [class^="col-"] {
+  background-color: #ccc;
+}
+
+/* line 52, ../../app/scss/application.scss */
+.table-cell {
+  display: table-cell;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+/*
+  TYPOGRAPHY / LINKS
+*/
+/* line 57, ../../app/scss/application.scss */
+a {
+  color: #0271b1;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 64, ../../app/scss/application.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 67, ../../app/scss/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* line 68, ../../app/scss/application.scss */
+h1 {
+  font-size: 30px;
+  font-size: 3.0rem;
+}
+
+/* line 69, ../../app/scss/application.scss */
+h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+/* line 70, ../../app/scss/application.scss */
+h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+/* line 71, ../../app/scss/application.scss */
+h4 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+/* line 73, ../../app/scss/application.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 74, ../../app/scss/application.scss */
+.highlight {
+  color: #f81200;
+}
+
+/* line 75, ../../app/scss/application.scss */
+.note {
+  color: #aeaeae;
+}
+
+/*
+  NAVBAR
+*/
+/* line 80, ../../app/scss/application.scss */
+.navbar {
+  background: #f9f9f9;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 87, ../../app/scss/application.scss */
+.navbar li {
+  border-right: 1px solid #e0e0e0;
+}
+/* line 90, ../../app/scss/application.scss */
+.navbar li:first-child {
+  border-left: 1px solid #e0e0e0;
+}
+/* line 91, ../../app/scss/application.scss */
+.navbar li.clear {
+  border-right: 0;
+}
+/* line 93, ../../app/scss/application.scss */
+.navbar li a {
+  color: #999;
+}
+/* line 94, ../../app/scss/application.scss */
+.navbar li.active a {
+  background: #fff;
+  color: #8e44ad;
+  /*border-bottom: 1px solid #fff;
+  margin-bottom: -1px;*/
+}
+/* line 103, ../../app/scss/application.scss */
+.navbar li i {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+/* line 115, ../../app/scss/application.scss */
+.navbar.ui-show {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+/* line 120, ../../app/scss/application.scss */
+.navbar.ui-hide {
+  -webkit-transform: translate3d(0, -100px, 0);
+  -moz-transform: translate3d(0, -100px, 0);
+  -ms-transform: translate3d(0, -100px, 0);
+  -o-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+  opacity: 0;
+}
+
+/* line 127, ../../app/scss/application.scss */
+.navbar li .icon-code:before {
+  content: "\f271";
+}
+
+/* collapsed icon */
+/* line 128, ../../app/scss/application.scss */
+.navbar li.active .icon-code:before {
+  content: "\f270";
+}
+
+/* expanded icon */
+/* line 130, ../../app/scss/application.scss */
+.navbar li a:hover {
+  background: #ecf0f1;
+  color: #555;
+}
+
+/* line 131, ../../app/scss/application.scss */
+.navbar li a:hover > i {
+  color: #9b59b6;
+}
+
+/*
+  OVERLAY
+*/
+/* line 137, ../../app/scss/application.scss */
+.overlay {
+  z-index: 1001;
+}
+
+/* line 138, ../../app/scss/application.scss */
+.overlay .wrapper {
+  z-index: 1002;
+}
+
+/* line 140, ../../app/scss/application.scss */
+.overlay .overlay-mask {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+}
+
+/*
+  APP LOGO
+*/
+/* line 152, ../../app/scss/application.scss */
+.appLogo {
+  display: table;
+  height: 150px;
+  width: 150px;
+  padding: 30px;
+  background: #0BB326;
+  color: #fff;
+  font-size: 40px;
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  /*  position:absolute;
+    top:50%;
+    left:-3000px;*/
+  /*  -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;*/
+}
+
+/* line 182, ../../app/scss/application.scss */
+.appLogo i {
+  font-size: 50px;
+  font-size: 5rem;
+}
+
+/* line 184, ../../app/scss/application.scss */
+.appLogo.animate {
+  -webkit-animation: jellyize 1s both linear;
+  animation: jellyize 1s both linear;
+}
+
+/*
+  EDITOR
+*/
+/* line 193, ../../app/scss/application.scss */
+.trap {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 195, ../../app/scss/application.scss */
+section {
+  background: #fff;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+/* PANELS */
+/* line 207, ../../app/scss/application.scss */
+.panels .col {
+  padding: 0px;
+}
+
+/* line 210, ../../app/scss/application.scss */
+.panels .editors,
+.panels .result {
+  height: 100%;
+}
+
+/* line 212, ../../app/scss/application.scss */
+.panels .editors .box {
+  height: 33.33%;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 224, ../../app/scss/application.scss */
+.panels .editors .box.focus,
+.panels .result .box.preview {
+  height: 100%;
+}
+
+/* line 226, ../../app/scss/application.scss */
+.panels .editors .box.contract {
+  opacity: 0;
+  height: 0%;
+}
+
+/*.editors .CodeMirror {
+  height: 100%;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+*/
+/*.ace_scrollbar {
+    display: none !important;
+}*/
+/* Borders */
+/* line 244, ../../app/scss/application.scss */
+.editors {
+  border-right: 1px solid #e0e0e0;
+}
+
+/* line 246, ../../app/scss/application.scss */
+.editors .box:nth-child(1),
+.editors .box:nth-child(2) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* BOX */
+/* line 249, ../../app/scss/application.scss */
+.box {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  /*overflow: hidden;*/
+}
+
+/* line 258, ../../app/scss/application.scss */
+.box .editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 266, ../../app/scss/application.scss */
+.box .tag {
+  padding: 10px;
+  font-size: 12px;
+  color: #888;
+  border: 1px solid #ecf0f1;
+  /*color: #ccc;
+  border: 1px solid #ecf0f1;*/
+  /*border-top:0;
+  border-right: 0;*/
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+/* line 289, ../../app/scss/application.scss */
+.box:hover > .tag {
+  /*color:#888; border-color:#ccc;*/
+  border: none;
+  background: #8e44ad;
+  color: #fff;
+}
+
+/* TEXTAREA */
+/* line 297, ../../app/scss/application.scss */
+.box textarea {
+  resize: none;
+  outline: none;
+  overflow: auto;
+  /* IE hack to remove scrollbars */
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  min-height: 100px;
+  /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
+  /*font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; */
+  font-weight: 200;
+  font-size: 10pt;
+  line-height: 14pt;
+  color: #333;
+  background: #fff;
+  border: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* line 330, ../../app/scss/application.scss */
+.box textarea:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.07);
+}
+
+/* line 337, ../../app/scss/application.scss */
+.box:focus ~ .tag,
+.box textarea:focus ~ .tag {
+  /*  border:none;
+    background:#8e44ad;
+    color:#fff;*/
+  opacity: 0;
+}
+
+/* line 344, ../../app/scss/application.scss */
+.box iframe {
+  width: 100%;
+  height: 100%;
+  /*min-height: 400px;*/
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 357, ../../app/scss/application.scss */
+.box iframe:focus {
+  border-color: #f00;
+}
+
+/*.box textarea::selection { background:#f00; }
+.box textarea::-moz-selection { background:#f00; }
+.box textarea::-webkit-selection { background:#f00; }
+*/
+/* old */
+/* line 366, ../../app/scss/application.scss */
+.clearLink {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  background: #eaeaea;
+  color: #777;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10pt;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 2px;
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 382, ../../app/scss/application.scss */
+.clearLink:hover {
+  background: #f0f0f0;
+}
+
+/* line 386, ../../app/scss/application.scss */
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+  transition: all linear 0.5s;
+}
+
+/* line 397, ../../app/scss/application.scss */
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: block !important;
+}
+
+/* line 402, ../../app/scss/application.scss */
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+/* line 407, ../../app/scss/application.scss */
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
